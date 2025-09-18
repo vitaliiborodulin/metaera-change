@@ -1,0 +1,198 @@
+// USER VARIABLES SECTION
+@white: #fff;
+@grey: #F9F9F9;
+@black: #180B02;
+@accent: #0E80D4;
+
+
+@fontsize: 20px; // Body Font Size
+@lineheight: 1.2; // Document Line Height
+
+@userfont: 'Lab Grotesque', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// .reset();
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    .wrapper();
+}
+
+// ::placeholder {
+// 	color: fade(@black, 40%);
+// }
+
+// ::selection {
+// 	background-color: fade(@accent, 30%);
+// 	color: @black;
+// }
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 1px solid @accent2 }
+// 	&:required:valid { border: 1px solid green }
+// }
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../fonts/LabGrotesque-Regular.eot');
+    src: url('../fonts/LabGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LabGrotesque-Regular.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Regular.woff') format('woff'),
+        url('../fonts/LabGrotesque-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../fonts/LabGrotesque-Medium.eot');
+    src: url('../fonts/LabGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LabGrotesque-Medium.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Medium.woff') format('woff'),
+        url('../fonts/LabGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('../fonts/LabGrotesque-Bold.eot');
+    src: url('../fonts/LabGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LabGrotesque-Bold.woff2') format('woff2'),
+        url('../fonts/LabGrotesque-Bold.woff') format('woff'),
+        url('../fonts/LabGrotesque-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// html, body {
+//     overflow-x: hidden;
+// }
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+body {
+    position: relative;
+    font-family: @userfont;
+    font-size: @fontsize;
+    line-height: @lineheight;
+    font-weight: 400;
+    color: @black;
+    background-color: @white;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-width: 320px;
+    // letter-spacing: -0.01em;
+}
+
+main {
+    min-height: 100vh;
+}
+
+
+
+// a:link {
+// //     color: @accent;
+//     text-decoration: none;
+// }
+
+// a:visited {
+// //     color: @accent-hover;
+//     text-decoration: none;
+// }
+
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+input, textarea { 
+    field-sizing: content; 
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.bg-w {
+    background-color: @white;
+}
+
+.bg-f9 {
+    background-color: #F9F9F9;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+i, em {
+    font-style: italic;
+}
+
+.tac {
+    text-align: center;
+}
+
+
+b, strong {
+    font-weight: 700;
+}
+
+
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+    outline: none !important; 
+}
+
+// fix safari
+input[type='submit'] { 
+	-webkit-appearance: none; 
+	-moz-appearance: none; 
+	appearance: none; 
+}
