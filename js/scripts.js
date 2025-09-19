@@ -1,5 +1,8 @@
 $(function() {
 
-    console.log(1);
+    
+    $('.banner__content').on('click', function(){
+        $('.banner').slideUp();
+    });
 
 });
