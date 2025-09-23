@@ -84,28 +84,28 @@ $(function() {
     //     priceSlider.update();
     // });
     
-    // let swiperinit = false;
-    // let mobileswiper;
+    let swiperinit = false;
+    let mobileswiper;
     
-    // function swiperOn() {
-    //     if (window.innerWidth <= 576) {
-    //         $('.price__list').wrapInner('<div class="swiper-wrapper"></div>');
-    //         swiperinit = true;
-    //         mobileswiper = new Swiper('.price__list', {
-    //             slideClass: 'price__item',
-    //             slidesPerView: 1.4,
-    //             spaceBetween: 16, 
-    //         });
-    //     } else if (swiperinit) {
-    //         $('.price__list .swiper-wrapper').contents().unwrap();
-    //         $('.price__list .price__item').removeAttr('style');    
-    //         //mobileswiper.destroy(true, true); 
-    //         swiperinit = false;
-    //     }
-    // }
+    function swiperOn() {
+        if (window.innerWidth <= 576) {
+            $('.price__list').wrapInner('<div class="swiper-wrapper"></div>');
+            swiperinit = true;
+            mobileswiper = new Swiper('.price__list', {
+                slideClass: 'price__item',
+                slidesPerView: 1.4,
+                spaceBetween: 16, 
+            });
+        } else if (swiperinit) {
+            $('.price__list .swiper-wrapper').contents().unwrap();
+            $('.price__list .price__item').removeAttr('style');    
+            //mobileswiper.destroy(true, true); 
+            swiperinit = false;
+        }
+    }
     
-    // swiperOn();
-    // $(window).resize(swiperOn); 
+    swiperOn();
+    $(window).resize(swiperOn); 
     
     
     let swiperinit1 = false;
