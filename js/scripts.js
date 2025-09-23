@@ -6,6 +6,37 @@ $(function() {
         $('.banner').hide();
     });
 
+    const burger = $('.burger');
+    const menu = $('.header__nav');
+    
+    
+    burger.on('click', function(e) {
+        e.preventDefault();
+        burger.toggleClass('burger--close');
+    
+        // menu.toggle(300);
+        // $('html, body').toggleClass('overflow');
+    });
+    
+    $(document).keyup(function(e) {
+        if (e.key === "Escape" || e.keyCode === 27) {
+            // menu.hide(300);
+            burger.removeClass('burger--close');
+            // $('html, body').removeClass('overflow');
+        }
+    });
+    
+    // $('body').on('click', '.navigation__menu a[href*="#"]', function(e) {
+    // 	var fixed_offset = 70;
+    
+    // 	$('html,body').stop().animate({
+    // 			scrollTop: $(this.hash).offset().top - fixed_offset
+    // 	}, 500);
+    
+    // 	e.preventDefault();
+    // 	menu.removeClass('open');
+    // 	burger.removeClass('header__burger--close');
+    // });
     $('.tabs-wrapper').each(function() {
       let ths = $(this);
       ths.find('.tab-item').not(':first').hide();
@@ -53,35 +84,51 @@ $(function() {
     //     priceSlider.update();
     // });
     
-    let swiperinit = false;
-    let mobileswiper;
+    // let swiperinit = false;
+    // let mobileswiper;
     
-    function swiperOn() {
+    // function swiperOn() {
+    //     if (window.innerWidth <= 576) {
+    //         $('.price__list').wrapInner('<div class="swiper-wrapper"></div>');
+    //         swiperinit = true;
+    //         mobileswiper = new Swiper('.price__list', {
+    //             slideClass: 'price__item',
+    //             slidesPerView: 1.4,
+    //             spaceBetween: 16, 
+    //         });
+    //     } else if (swiperinit) {
+    //         $('.price__list .swiper-wrapper').contents().unwrap();
+    //         $('.price__list .price__item').removeAttr('style');    
+    //         //mobileswiper.destroy(true, true); 
+    //         swiperinit = false;
+    //     }
+    // }
+    
+    // swiperOn();
+    // $(window).resize(swiperOn); 
+    
+    
+    let swiperinit1 = false;
+    let mobileswiper1;
+    
+    function swiperOn1() {
         if (window.innerWidth <= 576) {
-            $('.price__list').wrapInner('<div class="swiper-wrapper"></div>');
-            swiperinit = true;
-            mobileswiper = new Swiper('.price__list', {
-                slideClass: 'price__item',
+            $('.compare__tabs-content .tab-item').wrapInner('<div class="swiper-wrapper"></div>');
+            swiperinit1 = true;
+            mobileswiper1 = new Swiper('.compare__tabs-content .tab-item', {
+                slideClass: 'compare__card',
                 slidesPerView: 1.4,
-                spaceBetween: 16,
-                // breakpoints: {
-                //     0: {
-                //         slidesPerView: 1,
-                //     },
-                //     576: {
-                //         slidesPerView: 2,
-                //     }
-                // },   
+                spaceBetween: 16, 
             });
         } else if (swiperinit) {
-            $('.price__list .swiper-wrapper').contents().unwrap();
-            $('.price__list .price__item').removeAttr('style');    
+            $('.compare__tabs-content .tab-item .swiper-wrapper').contents().unwrap();
+            $('.compare__tabs-content .tab-item .compare__card').removeAttr('style');    
             //mobileswiper.destroy(true, true); 
-            swiperinit = false;
+            swiperinit1 = false;
         }
     }
     
-    swiperOn();
-    $(window).resize(swiperOn);
+    swiperOn1();
+    $(window).resize(swiperOn1);
 
 });

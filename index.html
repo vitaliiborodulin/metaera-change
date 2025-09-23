@@ -8,8 +8,8 @@
 
 	<title>Страница</title>
 
-	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-    <!-- <link rel="icon" href="img/favicon.svg" type="image/svg+xml"> -->
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
 
 	<!-- <link rel="stylesheet" href="css/carousel.css"> -->
@@ -19,20 +19,72 @@
 
 <body class="home">
 
+	<!-- banner -->
 	<div class="banner">
 	    <div class="container">
 	        <div class="banner__content">Как работает  трансграничный электронный  документооборот с Россией и Беларусью</div>
 	    </div>
 	</div>
+	<!-- end banner -->
 	
 	<!-- header -->
-	<!-- <header class="header">
+	<header class="header">
 	    <div class="container">
 	
-	       header
+	       <div class="header__content">
+	
+	
+	            <div class="burger"><span>Меню</span></div>
+	
+	            <a href="#" class="custom-logo-link">
+	                <img class="custom-logo" src="img/logo.svg" alt="">
+	            </a>
+	
+	
+	            <ul class="header__menu">
+	                <li class="current-menu-item"><a href="#">Цены</a></li>
+	                <li><a href="#">Интеграция</a></li>
+	                <li><a href="#">Справка</a></li>
+	                <li><a href="#">Контакты</a></li>
+	                <li><a href="#">Техподдержка</a></li>
+	            </ul>
+	
+	
+	            <ul class="header__user">
+	                <li><a href="#">Войти</a></li>
+	                <li><a class="btn btn-o" href="#">Регистрация</a></li>
+	            </ul>
+	
+	            <div class="header__lang">
+	                <a href="#" class="active">RU</a>
+	                <a href="#">KZ</a>
+	            </div>
+	
+	       </div>
 	
 	    </div>
-	</header> -->
+	
+	    <!-- <nav class="header__nav">
+	        <div class="container">
+	            <div class="header__menu-wrapper">
+	                
+	                <ul class="menu">
+	                    <li class="current-menu-item"><a href="#">Цены</a></li>
+	                    <li><a href="#">Интеграция</a></li>
+	                    <li><a href="#">Справка</a></li>
+	                    <li><a href="#">Контакты</a></li>
+	                    <li><a href="#">Техподдержка</a></li>
+	                </ul>
+	
+	                <ul class="menu1">
+	                    <li><a href="#">Проверка контрагентов</a></li>
+	                </ul>
+	
+	            </div>
+	        </div>
+	    </nav> -->
+	
+	</header>
 	<!-- end header -->
 
 	<main>
@@ -96,10 +148,10 @@
 					<div class="tabs-content work__tabs-content">
 
 						<div class="tab-item">
-							<div class="tab-image">
+							<div class="tab-card tab-image">
 								<img src="img/gift-img.jpg" alt="">
 							</div>
-							<div class="tab-text">
+							<div class="tab-card tab-text">
 								<div class="tab-title">Важные юридические аспекты:</div>
 								<ul class="tab-list">
 									<li class="tab-list-item">
@@ -116,10 +168,10 @@
 						</div>
 
 						<div class="tab-item">
-							<div class="tab-image">
+							<div class="tab-card tab-image">
 								<img src="img/hero-woman.png" alt="">
 							</div>
-							<div class="tab-text">
+							<div class="tab-card tab-text">
 								<div class="tab-title">Важные юридические аспекты:2</div>
 								<ul class="tab-list">
 									<li class="tab-list-item">
@@ -141,33 +193,203 @@
 			</div>
 		</section>
 
-		<!-- <section class="compare home-section">
-			<div class="container">
-				<h2 class="compare__title home-h2-title">Бумага или ЭДО: что выгоднее для бизнеса?</h2>
-
-				<div class="tabs-wrapper">
-					<div class="tabs">
-						<span class="tab">Время</span>
-						<span class="tab">Деньги</span>
-						<span class="tab">Бумажная волокита</span>
-						<span class="tab">Исправление ошибок</span>
-						<span class="tab">Защита</span>
-						<span class="tab">Хранение</span>
+		<!-- compare -->
+		<section class="compare home-section">
+					<div class="container">
+						<h2 class="compare__title home-h2-title">Бумага или ЭДО: что выгоднее для бизнеса?</h2>
+		
+						<div class="tabs-wrapper">
+		
+							<div class="tabs">
+								<span class="tab">Время</span>
+								<span class="tab">Деньги</span>
+								<span class="tab">Бумажная волокита</span>
+								<span class="tab">Исправление ошибок</span>
+								<span class="tab">Защита</span>
+								<span class="tab">Хранение</span>
+							</div>
+		
+							<div class="tabs-content compare__tabs-content">
+		
+								<div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p>Среднее время почтовой доставки стандартных отправлений из Казахстана в Россию и Беларусь составляет 2-4 недели. </p>
+											<p>Если вы отправляете документы каждый месяц, за год получается 36-72 недели (252-504 дня). От полугода до почти полутора лет уходит только на ожидание, пока адресаты получат ваши документы. <a href="#">Как мы считали.</a></p>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем:  2-4 недели</div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p>Секунды вместо дней.</p>
+											<p>Электронные документы достигают контрагентов моментально, где бы те ни находились. Подписанные экземпляры столь же быстро возвращаются к вам.</p>
+											<p>Мгновенная доставка — ключевое преимущество ЭДО.</p>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем:  3 сек</div>
+									</div>
+								</div>
+		
+		                        <div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p>Отправка 120 пакетов документов (360 листов) из Казахстана в Россию/Беларусь стандартной авиапочтой обойдется компании примерно в 522 100 KZT в год только на прямые расходы (печать, бумага, конверты, почта). <a href="#">Как мы считали.</a></p>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем:  522 100 KZT </div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p>Отправка 120 пакетов документов (360 листов) из Казахстана в Россию/Беларусь стандартной авиапочтой обойдется компании примерно в 522 100 KZT в год только на прямые расходы (печать, бумага, конверты, почта). <a href="#">Как мы считали.</a></p>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем:  60 000 KZT</div>
+									</div>
+								</div>
+		
+		                        <div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p>Этапы работы с бумажным документом:</p>
+		                                    <ul>
+		                                        <li>Подготовка к печати: Проверка файла, настройка принтера: 3 мин</li>
+		                                        <li>Печать и сборка:  Распечатка (3 листа), устранение сбоев (замятие, замена картриджа): 5 мин</li>
+		                                        <li>Проверка комплектности: 2 мин</li>
+		                                        <li>Упаковка и маркировка: Вложение в конверт, заполнение адреса, опись вложения: 4 мин</li>
+		                                        <li>Оформление отправки: Поиск реквизитов получателя, заполнение почтового бланка: 5 мин</li>
+		                                        <li>Логистика:  Дорога до почты, очередь, отправка: 30 мин</li>
+		                                    </ul>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем на 1 пакет: <br> 49 мин (≈0.82 ч)</div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p>Этапы работы в электронной системе:</p>
+		                                    <ul>
+		                                        <li>Загрузка файла в систему: 1 мин</li>
+		                                        <li>Выбор контрагента из базы: 0.5 мин</li>
+		                                        <li>Отправка пакета (автоподписание ЭП): 0.1 мин</li>
+		                                    </ul>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем на 1 пакет: <br> 1.6 мин (≈0.027 ч)</div>
+									</div>
+								</div>
+		
+		                        <div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p>Любая ошибка — дорогостоящий круг повторной отправки.</p>
+		                                    <p>Неверные реквизиты, отсутствие печати или подписи обрекают документ на замену. </p>
+		                                    <p>Это вынуждает:</p>
+		                                    <ol>
+		                                        <li>Тратить дни на согласование исправлений с контрагентом</li>
+		                                        <li>Повторно организовывать доставку с нуля</li>
+		                                        <li>Нести двойные расходы на пересылку</li>
+		                                    </ol>
+										</div>
+										<div class="tab-fin">ИТОГО:  в среднем для компании <br> с 120 отправками/год: потери <br> на исправление ошибок - 180 000 KZT</div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p><b>Предотвращение вместо исправления:</b> Система автоматически проверяет обязательные поля (ИНН, банковские реквизиты) и блокирует отправку без ЭП/КЭП.</p>
+		                                    <p><b>Исправление за минуты, а не за дни:</b> Контрагент вносит правки в исходный электронный документ — не нужно перепечатывать, подписывать заново или ехать на почту.</p>
+		                                    <p><b>Гарантия юридической значимости:</b> ЭДО физически не отправит документ без электронной подписи (ЭП) — риск "забытой печати" исключен.</p>
+		                                    <p><b>Отправка 2.0 = 5 секунд:</b> Повторная отправка исправленного документа — кнопка "Отправить" вместо нового цикла доставки.</p>
+										</div>
+										<div class="tab-fin">ИТОГО в среднем для компании с 120 отправками/год потери на исправление ошибок -  0 KZT (экономия 150+ часов рабочего времени сотрудников).</div>
+									</div>
+								</div>
+		
+		                        <div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p><b>Подпись</b> Легко подделать • Подлинность — только через дорогую экспертизу</p>
+		                                    <p><b>Целостность</b> Можно изменить после подписания (подчистка, дописка) • Не обнаруживается автоматически</p>
+		                                    <p><b>Авторство</b> Легко оспорить ("Это не моя подпись") • Требует свидетелей/экспертов</p>
+		                                    <p><b>Доказательная сила</b> Хрупкая • Длительные суды + затраты на экспертизы</p>
+		                                    <p><b>Физические риски</b> Потеря, порча, кража • Уязвим при пересылке</p>
+		                                    <p><b>Защита</b> Только сейфы/охрана • Не защищает от изменений</p>
+										</div>
+										<div class="tab-fin">ИТОГО: КРИТИЧЕСКИЕ РИСКИ <br>
+		                                    <ul>
+		                                        <li>Степень защищенности: 2/10</li>
+		                                        <li>Степень риска: 9/10</li>
+		                                    </ul>
+		                                </div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p><b>Подпись</b> Невозможно подделать (криптография) • Проверка за секунды</p>
+		                                    <p><b>Целостность</b> Любое изменение аннулирует подпись • Гарантия неизменности</p>
+		                                    <p><b>Авторство</b> Жесткая привязка к владельцу • Сертификат УЦ после госидентификации</p>
+		                                    <p><b>Доказательная сила</b> Авто-журналы + криптография • Неоспоримость в суде</p>
+		                                    <p><b>Риски</b> Математическая стойкость • Доступ через авторизацию</p>
+		                                    <p><b>Защита</b> Математическая стойкость • Доступ через авторизацию</p>
+										</div>
+										<div class="tab-fin">ИТОГО: МИНИМАЛЬНЫЕ РИСКИ <br>
+		                                    <ul>
+		                                        <li>Степень защищенности: 9/10</li>
+		                                        <li>Степень риска: 1/10</li>
+		                                    </ul>
+		                                </div>
+									</div>
+								</div>
+		
+		                         <div class="tab-item">
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/paper-icon.svg" alt="">
+										<div class="tab-title">Бумага</div>
+										<div class="tab-descr">
+											<p><b>Первичные бухгалтерские документы — 5 лет</b> Кадровые приказы (прием/увольнение) — 75 лет</p>
+		                                    <p><b>Физические затраты для компании с 10 000 стр./год:</b> 30 м² спецхранилища (влажность &lt;60%, пожарная сигнализация) → 600 000 KZT/год аренда Металлические стеллажи (15 шт.) → 450 000 KZT (разовые)</p>
+		                                    <p><b>Риски:</b> Порча 12% документов (вода, солнце, грибок) → Восстановление: 150-300 KZT/страница <b>Поиск 1 акта за 2019 год → До 40 минут ручного пролистывания.</b></p>
+										</div>
+										<div class="tab-fin">ИТОГО: <br> Содержание бумажного архива обходитсяв 2.4 млн KZT/год (аренда, персонал, охрана) и не защищает от риска уничтожения.</div>
+									</div>
+									<div class="tab-card compare__card">
+										<img class="tab-icon" src="img/metaera-icon.svg" alt="">
+										<div class="tab-title">Электронный документ</div>
+										<div class="tab-descr">
+											<p><b>Электронное хранение  в МетаЭре:</b></p>
+		                                    <p><b>Легкость и безопасность:</b> Мегабайты в защищенном облаке: 0 KZT за архив</p>
+		                                    <p><b>Бесплатное размещение:</b> Документы хранятся без доплат на серверах оператора ЭДО (МетаЭра, Enter, КазДОК).</p>
+		                                    <p><b>Гарантии безопасности:</b> Каждый файл скопирован на 3+ геораспределенных сервера (риск потери → 0%). <br> Шифрование AES-256 + защита от DDoS-атак</p>
+		                                    <p><b>Эффективность:</b> <b>Поиск договора по номеру/контрагенту → 3 секунды.</b></p>
+		                                    
+										</div>
+										<div class="tab-fin">ИТОГО: <br>
+		                                    <ul>
+		                                        <li>Документы хранятся бесплатно у оператора ЭДО МетаЭра</li>
+		                                        <li>Гарантия сохранности через многократное копирование</li>
+		                                        <li>Мгновенный доступ из любой точки мира.</li>
+		                                    </ul>
+		                                </div>
+									</div>
+								</div>
+		
+							</div>
+						</div>
+		
 					</div>
-					<div class="tabs-content">
-						<div class="tab-item">Содержимое 1</div>
-						<div class="tab-item">Содержимое 2</div>
-						<div class="tab-item">Содержимое 3</div>
-						<div class="tab-item">Содержимое 4</div>
-						<div class="tab-item">Содержимое 5</div>
-						<div class="tab-item">Содержимое 6</div>
-					</div>
-				</div>
-
-			</div>
-		</section> -->
-
-
+				</section>
+		<!-- end compare -->
 
 		<section class="hero-cards">
 			<div class="container">
