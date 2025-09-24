@@ -1,11 +1,10 @@
 $(function() {
 
-    
     $('.banner__content').on('click', function(){
         // $('.banner').slideUp();
         $('.banner').hide();
+        $('.header__nav').css('top', '0');
     });
-
     const burger = $('.burger');
     const menu = $('.header__nav');
     
@@ -14,15 +13,15 @@ $(function() {
         e.preventDefault();
         burger.toggleClass('burger--close');
     
-        // menu.toggle(300);
-        // $('html, body').toggleClass('overflow');
+        menu.toggle(300);
+        $('html, body').toggleClass('overflow');
     });
     
     $(document).keyup(function(e) {
         if (e.key === "Escape" || e.keyCode === 27) {
-            // menu.hide(300);
+            menu.hide(300);
             burger.removeClass('burger--close');
-            // $('html, body').removeClass('overflow');
+            $('html, body').removeClass('overflow');
         }
     });
     
@@ -41,8 +40,8 @@ $(function() {
       let ths = $(this);
       ths.find('.tab-item').not(':first').hide();
       ths.find('.tab').click(function() {
-        ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-        ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+      ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+      ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
       }).eq(0).addClass('active');
     });
     // const container = document.querySelector(".price__list");
@@ -130,5 +129,70 @@ $(function() {
     
     swiperOn1();
     $(window).resize(swiperOn1);
+    let min = 300;
+    
+    // function readNext(el) {
+    
+    //     let b = $(el),
+    //         max = el.scrollHeight,
+    //         a = b.next(".read-next");
+    //     if (max <= min) a.hide();
+    //     else a.on("click", function(event) {
+    //         let h = b.height();
+    //         b.height(h < max ? max : min);
+    //         $(this).text(h < max ? "Свернуть" : "Развернуть");
+    //         return false
+    //     })
+    // }
+    
+    // console.log($('.ta1').prop('scrollHeight'));
+    
+    
+    
+    // let max = $('.ta1').prop('scrollHeight');
+    // let link = $('.ta1').next(".read-next");
+    
+    // if (max <= min) {
+    //     link.hide();
+    // } else {
+    //     link.on('click', function(){
+    //         let h = $('.ta1').height();
+    //         $('.ta1').height(h < max ? max : min);
+    //         $(this).text(h < max ? "Свернуть" : "Развернуть");
+    //         return false
+    //     });
+    // }
+    
+    // function readNext(el) {
+    //     let max = el.prop('scrollHeight');
+    //     let link = el.next(".read-next");
+    
+    //     if (max <= min) {
+    //         link.hide();
+    //     } else {
+    //         link.on('click', function(){
+    //             let h = el.height();
+    //             console.log(max);
+    //             el.height(h < max ? max : min);
+    //             $(this).text(h < max ? "Свернуть" : "Развернуть");
+    //             return false
+    //         });
+    //     }
+    // }
+    
+    
+    // $('.ta').each(function (index, element) {
+    //     readNext($(element));
+    // });
+    
+    // $('.tab').each(function (index, element) {
+    //     $(element).on('click', function(){
+    //         readNext($(element));
+    //     });
+    // });
+    
+    // $('#test')[0].scrollHeight
+    
+    $(".read-next").hide();
 
 });
