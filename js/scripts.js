@@ -117,7 +117,61 @@ $(function() {
             mobileswiper1 = new Swiper('.compare__tabs-content .tab-item', {
                 slideClass: 'compare__card',
                 slidesPerView: 1.4,
-                spaceBetween: 16, 
+                spaceBetween: 16,
+                on: {
+                    init: function () {
+                        console.log("Swiper initialized!");
+    
+                        let min = 400;
+    
+                        // if ($(window).width() <= '1280'){
+                        //     min = 360;
+                        // } else if ($(window).width() <= '576'){
+                        //     min = 300;
+                        // }
+    
+                        $(".ta").each(function(indx, el) {
+    
+                            let b = $(el),
+                                max = el.scrollHeight,
+                                a = b.next(".read-next");
+                                a.show();
+                            if (max <= min) a.hide();
+                            else a.on("click", function(event) {
+                                let h = b.height();
+                                b.height(h < max ? max : min);
+                                $(this).text(h < max ? "Свернуть" : "Развернуть");
+                                return false
+                            })
+                        });
+                    },
+                    // slideChange: function () {
+                    //     console.log("Slide changed!");
+    
+                    //     let min = 400;
+    
+                    //     if ($(window).width() <= '1280'){
+                    //         min = 360;
+                    //     } else if ($(window).width() <= '576'){
+                    //         min = 300;
+                    //     }
+    
+                    //     $(".ta").each(function(indx, el) {
+    
+                    //         let b = $(el),
+                    //             max = el.scrollHeight,
+                    //             a = b.next(".read-next");
+                    //             a.show();
+                    //         if (max <= min) a.hide();
+                    //         else a.on("click", function(event) {
+                    //             let h = b.height();
+                    //             b.height(h < max ? max : min);
+                    //             $(this).text(h < max ? "Свернуть" : "Развернуть");
+                    //             return false
+                    //         })
+                    //     });
+                    // },
+                },
             });
         } else if (swiperinit) {
             $('.compare__tabs-content .tab-item .swiper-wrapper').contents().unwrap();
@@ -129,70 +183,45 @@ $(function() {
     
     swiperOn1();
     $(window).resize(swiperOn1);
-    let min = 300;
+    let min = 400;
     
-    // function readNext(el) {
-    
-    //     let b = $(el),
-    //         max = el.scrollHeight,
-    //         a = b.next(".read-next");
-    //     if (max <= min) a.hide();
-    //     else a.on("click", function(event) {
-    //         let h = b.height();
-    //         b.height(h < max ? max : min);
-    //         $(this).text(h < max ? "Свернуть" : "Развернуть");
-    //         return false
-    //     })
+    // if ($(window).width() <= '1280'){
+    //     min = 360;
+    // } else if ($(window).width() <= '576'){
+    //     min = 300;
     // }
     
-    // console.log($('.ta1').prop('scrollHeight'));
+    $(".ta").each(function(indx, el) {
     
+        let b = $(el),
+            max = el.scrollHeight,
+            a = b.next(".read-next");
+        if (max <= min) a.hide();
+        else a.on("click", function(event) {
+            let h = b.height();
+            b.height(h < max ? max : min);
+            $(this).text(h < max ? "Свернуть" : "Развернуть");
+            return false
+        })
+    });
     
+    $('.tab').on('click', function(){
     
-    // let max = $('.ta1').prop('scrollHeight');
-    // let link = $('.ta1').next(".read-next");
+        $(".ta").each(function(indx, el) {
     
-    // if (max <= min) {
-    //     link.hide();
-    // } else {
-    //     link.on('click', function(){
-    //         let h = $('.ta1').height();
-    //         $('.ta1').height(h < max ? max : min);
-    //         $(this).text(h < max ? "Свернуть" : "Развернуть");
-    //         return false
-    //     });
-    // }
+            let b = $(el),
+                max = el.scrollHeight,
+                a = b.next(".read-next");
+                a.show();
+            if (max <= min) a.hide();
+            else a.on("click", function(event) {
+                let h = b.height();
+                b.height(h < max ? max : min);
+                $(this).text(h < max ? "Свернуть" : "Развернуть");
+                return false
+            })
+        });
     
-    // function readNext(el) {
-    //     let max = el.prop('scrollHeight');
-    //     let link = el.next(".read-next");
-    
-    //     if (max <= min) {
-    //         link.hide();
-    //     } else {
-    //         link.on('click', function(){
-    //             let h = el.height();
-    //             console.log(max);
-    //             el.height(h < max ? max : min);
-    //             $(this).text(h < max ? "Свернуть" : "Развернуть");
-    //             return false
-    //         });
-    //     }
-    // }
-    
-    
-    // $('.ta').each(function (index, element) {
-    //     readNext($(element));
-    // });
-    
-    // $('.tab').each(function (index, element) {
-    //     $(element).on('click', function(){
-    //         readNext($(element));
-    //     });
-    // });
-    
-    // $('#test')[0].scrollHeight
-    
-    $(".read-next").hide();
+    });
 
 });

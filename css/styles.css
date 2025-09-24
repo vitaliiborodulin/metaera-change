@@ -1351,6 +1351,12 @@ a.card:hover::after {
   border-radius: 40px;
 }
 
+.ta {
+  height: 400px;
+  transition: all 1s;
+  overflow: hidden;
+}
+
 .facts {
   padding: 50px 0;
 }
@@ -2501,6 +2507,10 @@ a.card:hover::after {
   }
 
   .link-more {
+    font-size: 16px;
+  }
+
+  .read-next {
     font-size: 16px;
   }
 
