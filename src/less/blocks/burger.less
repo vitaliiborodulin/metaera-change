@@ -1,0 +1,91 @@
+.burger {
+        @toggler-part-height: 2px;
+        @toggler-part-bg-color: @black;
+        @transition-time: 0.5s;
+
+        display: block;
+
+        // .col();
+        // .size(1);
+        // .size-xl(1);
+        // .size-md(2);
+
+        // .lg-block( {
+        //     display : block;
+        //     display : flex;
+        //     order: 3;
+        // });
+
+        position: relative;
+        z-index : 23;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 24px;
+        user-select: none;
+        cursor : pointer;
+        font-size: 0;
+        // padding: 6px 3px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &>span {
+            display: inline-block;
+            width: 100%;
+            // width: 18px;
+            height: @toggler-part-height;
+            background: @toggler-part-bg-color;
+            position: relative;
+            top: 10px;
+            transition: background @transition-time @transition-time;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: @toggler-part-height;
+                background: @toggler-part-bg-color;
+                transform-origin: 50% 50%;
+                transition: top @transition-time @transition-time, transform @transition-time;
+            }
+
+            &:before {
+                width: 100%;
+                top: -6px;
+            }
+
+            &:after {
+                width: 100%;
+                top: 6px;
+            }
+        }
+
+        &--close {
+            position: relative;
+            // z-index: 15;
+
+            >span {
+                transition: background @transition-time;
+                background: transparent;
+
+                &:before,
+                &:after {
+                    width: 100%;
+                    transition: top @transition-time, transform @transition-time @transition-time;
+                    top: 0;
+                    background-color: @black;
+                }
+
+                &:before {
+                    transform: rotate3d(0, 0, 1, 45deg);
+                }
+
+                &:after {
+                    transform: rotate3d(0, 0, 1, -45deg);
+                }
+            }
+        }
+    }

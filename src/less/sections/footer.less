@@ -1,9 +1,151 @@
 .footer {
     margin-top: 10px;
-    padding-top: 50px;
-    padding-bottom: 40px;
-    border-top: 1px solid #9E9E9E;
 
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    a {
+        text-decoration: none;
+        color: #505152;
+        transition: color 0.3s ease;
+        
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+            color: @accent;
+        }
+    }
+    
     &__content {
+        padding-top: 50px;
+        padding-bottom: 40px;
+        border-top: 1px solid #9E9E9E;
+
+        .xs-block({
+            padding-top: 10px;
+            padding-bottom: 30px;
+        });
+    }
+
+    &__top, &__bottom {
+        .row-flex();
+    }
+    
+
+    .custom-logo-link {
+        .col();
+        .size(4);
+        .size-xs(12);
+
+    }
+
+    &__box-wrap {
+        .col();
+        .size(8);
+        .size-xs(12);
+    }
+
+    &__box {
+        .row-flex();
+    }
+
+    &__info {
+        .col();
+        .size(6);
+        .size-md(12);
+
+        .md(margin-bottom, 30px);
+    
+        .xs-block({
+            margin-top: 30px;
+            margin-bottom: 20px;
+        });
+    }
+
+    &__item + &__item,
+     &__nav + &__nav {
+        margin-top: 30px;
+
+        .xs(margin-top, 20px);
+    }
+
+    &__nav-wrapper {
+        .col();
+        .size(6);
+        .size-md(12);
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 700;
+
+        .md(font-size, 18px);
+        .xs(font-size, 16px);
+    }
+
+    &__descr {
+        font-size: 20px;
+        color: #505152;
+
+        .md(font-size, 18px);
+        .xs(font-size, 16px);
+    }
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            font-size: 20px;
+            color: #505152;
+
+            .md(font-size, 18px);
+            .xs(font-size, 16px);
+        }
+
+        li + li {
+            margin-top: 6px;
+        }
+    }
+
+    &__bottom {
+        padding-top: 10px;
+        align-items: flex-end;
+
+        .lg(padding-top, 82px);
+        .md(padding-top, 100px);
+        .xs(padding-top, 20px);
+
+        .footer__soc {
+            .col();
+            .size(4);
+            .size-xs(12);
+
+        }
+
+        .footer__box-wrap {
+            .xs(margin-top, 68px);
+        }
+
+        .footer__descr {
+            .col();
+            .size(6);
+            .size-md(12);
+
+            font-size: 14px;
+            color: #9E9E9E;
+
+            .xs(font-size, 12px);
+        }
+
+        .footer__descr + .footer__descr {
+            .md(margin-top, 10px);
+        }
     }
 }

@@ -1,0 +1,145 @@
+.facts {
+    padding: 50px 0;
+
+    .xl-block({
+        padding: 40px 0;
+    });
+
+    .lg-block({
+        padding: 30px 0;
+    });
+
+    .md-block({
+        padding: 20px 0;
+    });
+
+    .container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__content {
+        .row-flex();
+    }
+
+    &__title {
+        .col();
+        .size(6);
+        .size-xl(12);
+
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 50px;
+        font-weight: 700;
+
+        .lg(font-size, 40px);
+        .md(font-size, 36px);
+        .xs(font-size, 24px);
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 700;
+
+        // .lg(font-size, 24px);
+        .xs(font-size, 18px);
+    }
+
+    &__descr, &__more {
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: #505152;
+
+        .md(font-size, 18px);
+        .xs(font-size, 16px);
+    }
+
+    &__wrapper {
+        .col();
+        .size(6);
+        .size-xl(12);
+
+        // display: flex;
+        // flex-wrap: wrap;
+        // gap: 5px;
+
+    }
+    
+    &__box {
+        .row-flex();
+    }
+    
+    &__item {
+        .col();
+        .size(6);
+        .size-xl(4);
+        .size-md(6);
+        .size-xs(12);
+
+        position: relative;
+        padding: 30px 0;
+       
+        .xs-block({
+            padding: 20px 0;
+        });
+    
+        &::after {
+            position: absolute;
+            content: '';
+            width: 90%;
+            height: 1px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: @black;
+
+            .xs(width, 100%);
+        }
+    }
+
+    &__item:nth-child(4)::after {
+        .xl(display, none);
+        .md(display, block);
+    }
+
+    &__item:nth-child(5)::after {
+        display: none;
+        .xs(display, block);
+    }
+
+    &__item:nth-child(6)::after {
+        display: none;
+    }
+    
+    &__list {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            position: relative;
+            list-style: none;
+            padding-left: 34px;
+            font-size: 20px;
+            font-weight: 500;
+
+            .md(font-size, 18px);
+            .xs(font-size, 16px);
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 24px;
+                height: 24px;
+                background: url(../img/tick-circle.svg) no-repeat center;
+                left: 0;
+                top: -2px;
+            }
+        }
+
+        li + li {
+            margin-top: 10px;
+        }
+    }
+}

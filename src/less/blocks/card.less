@@ -1,5 +1,26 @@
 .cards {
     .row-flex();
+
+    &__header {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 50px;
+        font-weight: 700;
+
+        .lg-block({
+            margin-bottom: 20px;
+            font-size: 40px;
+        });
+
+        .md-block({
+            font-size: 36px;
+        });
+
+        .xs-block({
+            margin-bottom: 10px;
+            font-size: 24px;
+        });
+    }
 }
 
 .card {
@@ -9,8 +30,9 @@
 
     display: block;
     position: relative;
+    z-index: 1;
     padding: 40px;
-    min-height: 380px;
+    min-height: 310px;
     
     color: @black;
     background-color: @grey;
@@ -21,16 +43,17 @@
 
     .lg-block({
         padding: 30px;
+        min-height: 280px;
     });
 
     .md-block({
         padding: 40px;
-        min-height: 200px;
+        min-height: 170px;
     });
 
     .xs-block({
         padding: 30px;
-        // min-height: 240px;
+        min-height: 160px;
     });
 
     &__title {
@@ -43,8 +66,7 @@
     
     &__descr {
         margin-top: 16px;
-        margin-bottom: 50px;
-
+        
         font-size: 20px;
         font-weight: 400;
 
@@ -64,6 +86,30 @@
         .xs-block({
             margin-top: 10px;
         })
+    }
+
+    
+
+   
+}
+
+a.card {
+    min-height: 380px;
+
+    .lg-block({
+        min-height: 410px;
+    });
+
+    .md-block({
+        min-height: 200px;
+    });
+
+    .xs-block({
+        min-height: 240px;
+    });
+
+    .card__descr {
+        margin-bottom: 50px;
     }
 
     &::after {
