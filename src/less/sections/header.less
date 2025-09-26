@@ -48,6 +48,12 @@
         &::after {
             position: absolute;
             content: '';
+            width: 80%;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 4px;
+            background-color: @accent;
         }
     }
 
@@ -117,35 +123,64 @@
 
     // menu
     &__nav {
-        display: none;
-        position: absolute;
+        // display: none;
+        position: fixed;
         z-index: 2;
         left: 0;
-        top: 140px;
+        // top: 140px;
+        top: 0;
         width: 100%;
+        height: 100%;
         // height: 100vh;
-        background-color: @white;
-        // background-color: rgba(24, 11, 2, 0.3);
+        // background-color: @white;
+        background-color: rgba(24, 11, 2, 0.3);
+        transform: translateY(-200%);
+        transform-origin: top;
+        transition: all 0.5s ease-in-out;
 
-        .lg-block({
-            top: 120px;
-        });
+        // .lg-block({
+        //     top: 120px;
+        // });
 
-        .md-block({
-            top: 100px;
-        });
+        // .md-block({
+        //     top: 100px;
+        // });
 
-        .xs-block({
-            top: 90px;
-        });
-        
-        &::after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(24, 11, 2, 0.3);
+        // .xs-block({
+        //     top: 90px;
+        // });
+
+        &.open {
+            transform: translateY(140px );
+
+            // .xl-block({
+            //     transform: translateY(120px + 120px);
+            // });
+
+            .lg-block({
+                transform: translateY(120px);
+            });
+
+            // .md-block({
+            //     transform: translateY(100px);
+            // });
+
+            // .xs-block({
+            //     transform: translateY(90px);
+            // });
         }
+
+        &.no-banner.open {
+            transform: translateY(0);
+        }
+        
+        // &::after {
+        //     position: absolute;
+        //     content: '';
+        //     width: 100%;
+        //     height: 100vh;
+        //     background-color: rgba(24, 11, 2, 0.3);
+        // }
 
     }
 
@@ -153,13 +188,15 @@
         
         padding-top: 130px;
         padding-bottom: 76px;
+
+        background-color: @white;
         
         .xl-block({
             padding-bottom: 90px;
         });
         
         .lg-block({
-            padding-top: 100px;
+            padding-top: 130px;
         });
         
         .xs-block({
@@ -233,8 +270,8 @@
         width: 24px;
         height: 24px;
         left: 0;
-        top: 0;
-        margin-top: 6px;
+        top: 50%;
+        transform: translateY(-50%);
         background: url(../img/search-status.svg) no-repeat center;
     }
 }
