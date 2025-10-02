@@ -810,11 +810,12 @@ input[type='submit'] {
   margin-left: 12px;
   margin-right: 12px;
   width: calc(33.333333333333336% - 24px);
-  display: block;
+  display: flex;
+  flex-direction: column;
   position: relative;
   z-index: 1;
   padding: 40px;
-  min-height: 310px;
+  min-height: 260px;
   color: #180B02;
   background-color: #F9F9F9;
   text-decoration: none;
@@ -824,9 +825,32 @@ input[type='submit'] {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
+.card:hover {
+  -webkit-transform: translateY(-8px) scale(1.02);
+          transform: translateY(-8px) scale(1.02);
+}
+
+.card.bg-db {
+  background-color: #00469A;
+  color: #fff;
+}
+
+.card.bg-lb {
+  background-color: #E6F4FD;
+}
+
+.card__pic {
+  width: 40px;
+  height: 40px;
+}
+
 .card__title {
   font-size: 26px;
   font-weight: 700;
+}
+
+.card__pic + .card__title {
+  margin-top: 30px;
 }
 
 .card__descr {
@@ -836,7 +860,8 @@ input[type='submit'] {
 }
 
 a.card {
-  min-height: 380px;
+  display: block;
+  min-height: 260px;
 }
 
 a.card .card__descr {
@@ -854,11 +879,6 @@ a.card::after {
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-a.card:hover {
-  -webkit-transform: translateY(-8px) scale(1.02);
-          transform: translateY(-8px) scale(1.02);
 }
 
 a.card:hover::after {
@@ -1366,7 +1386,7 @@ a.card:hover::after {
   border-radius: 40px;
 }
 
-.hero-cards {
+.home-hero-cards {
   padding-top: 80px;
   padding-bottom: 50px;
 }
@@ -1631,10 +1651,6 @@ a.card:hover::after {
   color: #505152;
 }
 
-.gift {
-  padding: 50px 0;
-}
-
 .gift .container {
   max-width: 1200px;
   margin-left: auto;
@@ -1685,81 +1701,20 @@ a.card:hover::after {
   align-self: flex-end;
 }
 
-.how {
-  padding: 50px 0;
+.fast .card__pic + .card__title {
+  margin-top: 30px;
 }
 
-.how__content {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
-  padding: 80px 111px 77px;
-  border-radius: 40px;
-}
-
-.how__title {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 12px;
-  margin-right: 12px;
-  width: calc(50% - 24px);
+.how .card + .card {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 50px;
-  font-weight: 700;
 }
 
-.how__steps {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 12px;
-  margin-right: 12px;
-  width: calc(50% - 24px);
-  counter-reset: steps 0;
-  padding: 0;
-  margin: 0;
+.how .card__descr {
+  margin-bottom: 30px;
 }
 
-.how__step {
-  position: relative;
-  padding-left: 45px;
-  padding-bottom: 30px;
-  font-size: 20px;
-  color: #505152;
-  border-left: 2px solid #0E80D4;
-  list-style: none;
-  counter-increment: steps 1;
-}
-
-.how__step::after {
-  position: absolute;
-  content: counter(steps);
-  left: -20px;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  border: 2px solid #0E80D4;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 40px;
-  color: #0E80D4;
-  background-color: #F9F9F9;
-}
-
-.how__step::before {
-  display: block;
-  content: "Шаг " counter(steps);
-  margin-bottom: 8px;
-  font-size: 26px;
-  font-weight: 700;
-  color: #180B02;
-}
-
-.how__step:last-child {
-  border: none;
+.how .card__pic {
+  margin-top: auto;
 }
 
 .start {
@@ -1920,6 +1875,10 @@ a.card:hover::after {
     padding: 40px 0;
   }
 
+  a.card {
+    min-height: 300px;
+  }
+
   .header__menu {
     display: none;
   }
@@ -1965,7 +1924,7 @@ a.card:hover::after {
     width: calc(33.333333333333336% - 24px);
   }
 
-  .hero-cards {
+  .home-hero-cards {
     padding: 40px 0;
   }
 
@@ -2013,18 +1972,6 @@ a.card:hover::after {
     margin-bottom: 60px;
   }
 
-  .gift {
-    padding: 40px 0;
-  }
-
-  .how {
-    padding: 40px 0;
-  }
-
-  .how__content {
-    padding: 80px 95px 73px;
-  }
-
   .start {
     padding-top: 40px;
     padding-bottom: 127px;
@@ -2056,7 +2003,7 @@ a.card:hover::after {
   }
 
   a.card {
-    min-height: 410px;
+    min-height: 280px;
   }
 
   a.card::after {
@@ -2105,7 +2052,7 @@ a.card:hover::after {
     font-size: 48px;
   }
 
-  .hero-cards {
+  .home-hero-cards {
     padding-bottom: 30px;
   }
 
@@ -2155,10 +2102,6 @@ a.card:hover::after {
     font-size: 28px;
   }
 
-  .gift {
-    padding: 30px 0;
-  }
-
   .gift__title {
     width: calc(33.333333333333336% - 24px);
   }
@@ -2172,22 +2115,6 @@ a.card:hover::after {
   }
 
   .gift__descr {
-    font-size: 24px;
-  }
-
-  .how {
-    padding: 30px 0;
-  }
-
-  .how__content {
-    padding: 70px 80px 65px;
-  }
-
-  .how__title {
-    font-size: 40px;
-  }
-
-  .how__step::before {
     font-size: 24px;
   }
 
@@ -2253,7 +2180,7 @@ a.card:hover::after {
   }
 
   a.card {
-    min-height: 200px;
+    min-height: 160px;
   }
 
   a.card::after {
@@ -2334,7 +2261,7 @@ a.card:hover::after {
     text-align: center;
   }
 
-  .hero-cards {
+  .home-hero-cards {
     padding-bottom: 20px;
   }
 
@@ -2435,10 +2362,6 @@ a.card:hover::after {
     margin-bottom: 36px;
   }
 
-  .gift {
-    padding: 20px 0;
-  }
-
   .gift__title {
     width: calc(100% - 24px);
   }
@@ -2453,34 +2376,26 @@ a.card:hover::after {
     width: calc(100% - 24px);
   }
 
-  .how {
-    padding: 20px 0;
+  .fast .card {
+    padding-right: 100px;
   }
 
-  .how__content {
-    padding: 60px 90px 68px;
+  .fast .card__pic + .card__title {
+    margin-top: 0;
   }
 
-  .how__title {
-    width: calc(100% - 24px);
+  .fast .card__pic {
+    position: absolute;
+    right: 40px;
+    top: 40px;
   }
 
-  .how__title {
-    margin-bottom: 20px;
-    font-size: 36px;
+  .how .card {
+    width: calc(33.333333333333336% - 24px);
   }
 
-  .how__steps {
-    width: calc(100% - 24px);
-  }
-
-  .how__steps {
-    padding-left: 20px;
-  }
-
-  .how__step {
-    padding-bottom: 20px;
-    font-size: 18px;
+  .how .card {
+    padding: 30px;
   }
 
   .start {
@@ -2587,7 +2502,7 @@ a.card:hover::after {
   }
 
   a.card {
-    min-height: 240px;
+    min-height: 170px;
   }
 
   a.card::after {
@@ -2699,7 +2614,7 @@ a.card:hover::after {
     height: 220px;
   }
 
-  .hero-cards {
+  .home-hero-cards {
     padding-top: 40px;
   }
 
@@ -2803,20 +2718,34 @@ a.card:hover::after {
     margin-bottom: 10px;
   }
 
-  .how__content {
-    padding: 30px 20px 39px;
+  .fast .card {
+    padding-right: 40px;
   }
 
-  .how__title {
-    font-size: 24px;
+  .fast .card__pic + .card__title {
+    margin-top: 30px;
   }
 
-  .how__step {
-    font-size: 16px;
+  .fast .card__pic {
+    position: static;
   }
 
-  .how__step::before {
-    font-size: 18px;
+  .how .card {
+    width: calc(100% - 24px);
+  }
+
+  .how .card {
+    min-height: 210px;
+    text-align: center;
+  }
+
+  .how .card + .card {
+    margin-top: 10px;
+  }
+
+  .how .card__pic {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .start {
