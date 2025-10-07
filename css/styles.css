@@ -562,12 +562,36 @@ strong {
 
 .h2 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 50px;
   font-weight: 700;
 }
 
 .h2-descr {
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.h3-descr {
+  font-size: 20px;
+  color: #505152;
+}
+
+.home .h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.home .h2-descr {
   margin-bottom: 30px;
   font-size: 26px;
 }
@@ -796,6 +820,7 @@ input[type='submit'] {
 
 .btns {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -1158,6 +1183,35 @@ a.card:hover::after {
 .tab-fin ul,
 .tab-fin ol {
   margin: 0;
+}
+
+.info {
+  position: relative;
+  padding: 64px 60px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  background-color: #00469A;
+  border-radius: 40px;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info p + p {
+  margin-top: 10px;
+}
+
+.info::before {
+  display: block;
+  content: '';
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background: url(../img/danger.svg) no-repeat center / contain;
 }
 
 .banner {
@@ -1802,6 +1856,117 @@ a.card:hover::after {
   margin: 0;
 }
 
+.agree__title {
+  margin-bottom: 10px;
+}
+
+.agree__box {
+  margin: 0;
+  padding: 60px;
+  counter-reset: agree 0;
+}
+
+.agree__item {
+  position: relative;
+  list-style: none;
+  counter-increment: agree 1;
+}
+
+.agree__item::before {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: block;
+  content: counter(agree);
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0E80D4;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 38px;
+  color: #0E80D4;
+}
+
+.agree__item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.agree__item-descr {
+  font-size: 20px;
+  color: #505152;
+}
+
+.agree__item-descr p {
+  margin: 0;
+}
+
+.agree__item-descr p + p {
+  margin-top: 10px;
+}
+
+.agree__item + .agree__item {
+  margin-top: 30px;
+}
+
+.confes .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.confes__box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin: 0;
+  padding: 0;
+}
+
+.confes__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: calc(33.333333333333336% - 24px);
+  list-style: none;
+}
+
+.accept__content {
+  padding: 60px;
+}
+
+.accept__subtitle {
+  margin-bottom: 53px;
+}
+
+.accept__box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
+  margin: 0;
+  padding: 0;
+}
+
+.accept__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 12px;
+  margin-right: 12px;
+  width: calc(33.333333333333336% - 24px);
+  list-style: none;
+}
+
+.accept .info {
+  margin-top: 10px;
+}
+
 .footer {
   margin-top: 10px;
 }
@@ -1932,63 +2097,6 @@ a.card:hover::after {
   color: #9E9E9E;
 }
 
-.agree__title {
-  margin-bottom: 10px;
-}
-
-.agree__box {
-  margin: 0;
-  padding: 60px;
-  counter-reset: agree 0;
-}
-
-.agree__item {
-  position: relative;
-  list-style: none;
-  counter-increment: agree 1;
-}
-
-.agree__item::before {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  display: block;
-  content: counter(agree);
-  width: 40px;
-  height: 40px;
-  border: 2px solid #0E80D4;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  line-height: 38px;
-  color: #0E80D4;
-}
-
-.agree__item-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.agree__item-descr {
-  font-size: 20px;
-  color: #505152;
-}
-
-.agree__item-descr p {
-  margin: 0;
-}
-
-.agree__item-descr p + p {
-  margin-top: 10px;
-}
-
-.agree__item + .agree__item {
-  margin-top: 30px;
-}
-
 @media screen and (max-width: 1280px) {
   .section {
     padding: 40px 0;
@@ -2004,6 +2112,10 @@ a.card:hover::after {
 
   a.card {
     min-height: 300px;
+  }
+
+  .info {
+    padding: 52px 60px;
   }
 
   .header__menu {
@@ -2029,6 +2141,10 @@ a.card:hover::after {
 
   .header__nav-bottom {
     display: flex;
+  }
+
+  .hero__text {
+    width: calc(100% - 24px);
   }
 
   .hero__title {
@@ -2099,6 +2215,10 @@ a.card:hover::after {
     padding-top: 40px;
     padding-bottom: 127px;
   }
+
+  .accept__subtitle {
+    margin-bottom: 39px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2107,11 +2227,23 @@ a.card:hover::after {
   }
 
   .h2 {
-    margin-bottom: 20px;
     font-size: 40px;
   }
 
   .h2-descr {
+    font-size: 24px;
+  }
+
+  .h3 {
+    font-size: 24px;
+  }
+
+  .home .h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+  }
+
+  .home .h2-descr {
     margin-bottom: 20px;
     font-size: 24px;
   }
@@ -2156,6 +2288,11 @@ a.card:hover::after {
 
   .tab-fin {
     font-size: 22px;
+  }
+
+  .info {
+    padding: 40px 60px;
+    gap: 20px;
   }
 
   .banner {
@@ -2254,10 +2391,6 @@ a.card:hover::after {
     font-size: 24px;
   }
 
-  .footer__bottom {
-    padding-top: 82px;
-  }
-
   .agree__title {
     margin-bottom: 10px;
   }
@@ -2268,6 +2401,14 @@ a.card:hover::after {
 
   .agree__item-title {
     font-size: 24px;
+  }
+
+  .accept__subtitle {
+    margin-bottom: 50px;
+  }
+
+  .footer__bottom {
+    padding-top: 82px;
   }
 }
 
@@ -2280,12 +2421,16 @@ a.card:hover::after {
     font-size: 36px;
   }
 
-  .btn {
+  .h3-descr {
     font-size: 18px;
   }
 
-  .btns {
-    justify-content: center;
+  .home .h2 {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 18px;
   }
 
   .card {
@@ -2339,6 +2484,11 @@ a.card:hover::after {
 
   .tab-fin {
     font-size: 20px;
+  }
+
+  .info {
+    padding: 34px 50px;
+    font-size: 18px;
   }
 
   .banner {
@@ -2536,6 +2686,38 @@ a.card:hover::after {
     margin-bottom: 30px;
   }
 
+  .agree__box {
+    padding: 40px 40px 48px;
+  }
+
+  .agree__item-descr {
+    font-size: 18px;
+  }
+
+  .confes__item {
+    width: calc(100% - 24px);
+  }
+
+  .confes__item + .confes__item {
+    margin-top: 30px;
+  }
+
+  .accept__content {
+    padding: 40px;
+  }
+
+  .accept__subtitle {
+    margin-bottom: 35px;
+  }
+
+  .accept__item {
+    width: calc(100% - 24px);
+  }
+
+  .accept__item + .accept__item {
+    margin-top: 40px;
+  }
+
   .footer__info {
     width: calc(100% - 24px);
   }
@@ -2571,14 +2753,6 @@ a.card:hover::after {
   .footer__bottom .footer__descr + .footer__descr {
     margin-top: 10px;
   }
-
-  .agree__box {
-    padding: 40px 40px 48px;
-  }
-
-  .agree__item-descr {
-    font-size: 18px;
-  }
 }
 
 @media screen and (max-width: 576px) {
@@ -2596,11 +2770,27 @@ a.card:hover::after {
   }
 
   .h2 {
-    margin-bottom: 10px;
     font-size: 24px;
   }
 
   .h2-descr {
+    font-size: 18px;
+  }
+
+  .h3 {
+    font-size: 18px;
+  }
+
+  .h3-descr {
+    font-size: 16px;
+  }
+
+  .home .h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .home .h2-descr {
     font-size: 18px;
   }
 
@@ -2677,6 +2867,19 @@ a.card:hover::after {
     font-size: 18px;
   }
 
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 30px;
+    font-size: 16px;
+  }
+
+  .info::before {
+    width: 40px;
+    height: 40px;
+  }
+
   .banner {
     font-size: 16px;
     height: 90px;
@@ -2718,6 +2921,10 @@ a.card:hover::after {
     display: flex;
   }
 
+  .hero {
+    padding-top: 10px;
+  }
+
   .hero__title {
     font-size: 28px;
   }
@@ -2737,6 +2944,7 @@ a.card:hover::after {
 
   .home .hero {
     padding: 40px 0;
+    padding-top: 10px;
   }
 
   .home-hero-cards {
@@ -2884,6 +3092,34 @@ a.card:hover::after {
     font-size: 18px;
   }
 
+  .agree__box {
+    padding: 30px 20px 44px;
+  }
+
+  .agree__item-title {
+    font-size: 18px;
+  }
+
+  .agree__item-descr {
+    font-size: 16px;
+    height: 180px;
+    transition: all 1s;
+    overflow: hidden;
+  }
+
+  .accept__content {
+    padding: 30px;
+  }
+
+  .accept__subtitle {
+    margin-bottom: 35px;
+  }
+
+  .accept__pic {
+    width: 40px;
+    height: 40px;
+  }
+
   .footer__content {
     padding-top: 10px;
     padding-bottom: 30px;
@@ -2933,21 +3169,6 @@ a.card:hover::after {
 
   .footer__bottom .footer__descr {
     font-size: 12px;
-  }
-
-  .agree__box {
-    padding: 30px 20px 44px;
-  }
-
-  .agree__item-title {
-    font-size: 18px;
-  }
-
-  .agree__item-descr {
-    font-size: 16px;
-    height: 180px;
-    transition: all 1s;
-    overflow: hidden;
   }
 }
 
