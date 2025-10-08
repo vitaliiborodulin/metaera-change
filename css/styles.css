@@ -424,6 +424,10 @@ template {
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: 'Lab Grotesque', sans-serif;
@@ -1856,6 +1860,17 @@ a.card:hover::after {
   margin: 0;
 }
 
+.map .container {
+  overflow-x: auto;
+  text-align: center;
+}
+
+.map__pic {
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .agree__title {
   margin-bottom: 10px;
 }
@@ -2143,6 +2158,10 @@ a.card:hover::after {
     display: flex;
   }
 
+  .hero {
+    padding-bottom: 40px;
+  }
+
   .hero__text {
     width: calc(100% - 24px);
   }
@@ -2306,6 +2325,10 @@ a.card:hover::after {
 
   .header__menu-wrapper {
     padding-top: 130px;
+  }
+
+  .hero {
+    padding-bottom: 30px;
   }
 
   .hero__title {
@@ -2504,6 +2527,10 @@ a.card:hover::after {
     font-size: 18px;
   }
 
+  .hero {
+    padding-bottom: 20px;
+  }
+
   .hero__title {
     font-size: 40px;
   }
@@ -2684,6 +2711,11 @@ a.card:hover::after {
 
   .start__descr {
     margin-bottom: 30px;
+  }
+
+  .map .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .agree__box {
