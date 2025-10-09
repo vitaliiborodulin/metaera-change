@@ -46,28 +46,53 @@ $(function() {
       ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
       }).eq(0).addClass('active');
     });
-    let swiperinit = false;
-    let mobileswiper;
+    let swiperPriceInit = false;
+    let mobilePriceSwiper;
     
-    function swiperOn() {
+    function swiperPriceOn() {
         if (window.innerWidth <= 576) {
             $('.price__list').wrapInner('<div class="swiper-wrapper"></div>');
-            swiperinit = true;
-            mobileswiper = new Swiper('.price__list', {
+            swiperPriceInit = true;
+            mobilePriceSwiper = new Swiper('.price__list', {
                 slideClass: 'price__item',
                 slidesPerView: 1.4,
                 spaceBetween: 16, 
             });
-        } else if (swiperinit) {
+        } else if (swiperPriceInit) {
             $('.price__list .swiper-wrapper').contents().unwrap();
             $('.price__list .price__item').removeAttr('style');    
             //mobileswiper.destroy(true, true); 
-            swiperinit = false;
+            swiperPriceInit = false;
         }
     }
     
-    swiperOn();
-    $(window).resize(swiperOn); 
+    swiperPriceOn();
+    $(window).resize(swiperPriceOn);
+    
+    // support
+    
+    let swiperSupportInit = false;
+    let mobileSupportSwiper;
+    
+    function swiperSupportOn() {
+        if (window.innerWidth >= 576 & window.innerWidth <= 768) {
+            $('.support__list').wrapInner('<div class="swiper-wrapper"></div>');
+            swiperSupportInit = true;
+            mobileswiper = new Swiper('.support__list', {
+                slideClass: 'support__item',
+                slidesPerView: 1.4,
+                spaceBetween: 16, 
+            });
+        } else if (swiperSupportInit) {
+            $('.support__list .swiper-wrapper').contents().unwrap();
+            $('.support__list .support__item').removeAttr('style');    
+            //mobileswiper.destroy(true, true); 
+            swiperSupportInit = false;
+        }
+    }
+    
+    swiperSupportOn();
+    $(window).resize(swiperSupportOn); 
     
     
     // let swiperinit1 = false;
