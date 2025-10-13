@@ -11,7 +11,8 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/styles.css?v=2">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 
 <body class="home">
@@ -466,7 +467,7 @@
 							</span>
 						</span>
 						<input class="btn form__submit" type="submit" value="Отправить заявку">
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -567,10 +568,48 @@
 	</footer>
 	<!-- end footer -->
 	
+	<!-- popup -->
+	 <div style="display: none;" class="popup" id="get-consult">
+	    <div class="form">
+	        <div class="popup__title">Бесплатная консультация</div>
+	        <div class="popup__descr">Заполните форму, и мы свяжемся с вами</div>
+	        <form class="wpcf7-form">
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="text" name="your-name" placeholder="Имя">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="email" name="your-mail" placeholder="Электронная почта">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="tel" name="your-tel" placeholder="+375 (29) 789-76-38">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <span class="wpcf7-form-control wpcf7-acceptance">
+	                    <span class="wpcf7-list-item">
+	                        <label>
+	                            <input type="checkbox" name="acceptance-389" value="1" aria-invalid="false">
+	                            <span class="wpcf7-list-item-label">Я ознакомлен(а) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
+	                        </label>
+	                    </span>
+	                </span>
+	            </span>
+	            <input class="btn form__submit" type="submit" value="Отправить заявку">
+	        </form>
+	    </div>
+	
+	    <!-- <div class="form__thank" style="display: none;">
+	      <img src="img/thank-1.svg" alt="">
+	      <div class="h1">Спасибо за обращение!</div>
+	      <p>Мы свяжемся с вами в ближайшее время</p>
+	    </div> -->
+	</div>
+	<!-- end popup -->
+	
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/scripts.js?v=2"></script>
+	<script src="js/scripts.js?v=3"></script>
 	<!-- end scripts -->
 
 </body>

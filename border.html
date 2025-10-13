@@ -11,7 +11,8 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/styles.css?v=2">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/styles.css?v=3">
 </head>
 
 <body class="page-template-page-border">
@@ -111,8 +112,8 @@
 							<p>Трансграничный электронный документооборот (ТЭДО) — это современный технологический стандарт обмена юридически значимыми документами с международными партнерами в цифровом формате. Для казахстанских компаний, ведущих бизнес с Россией и Беларусью, ТОО «МетаЭра» предлагает комплексное решение, соответствующее законодательству Республики Казахстан и международным требованиям.</p>
 						</div>
 						<div class="btns">
-							<a href="#" class="btn">Начать бесплатно</a>
-							<a href="#" class="btn btn-o">Получить консультацию</a>
+							<a href="javascript:;" class="btn">Начать бесплатно</a>
+							<a href="javascript:;" class="btn btn-o btn-popup" data-src="#get-consult">Получить консультацию</a>
 						</div>
 					</div>
 				</div>
@@ -206,7 +207,17 @@
 			</div>
 		</section>
 
-
+		<section class="scheme section">
+			<div class="container">
+				<h2 class="scheme__title h2 tac">Как работает трансграничный ЭДО <br> с ТОО «МетаЭра»</h2>
+				<div class="scheme__img tac">
+					<picture>
+						<source srcset="img/scheme-m.jpg" media="(max-width: 576px)">
+						<img src="img/scheme.jpg" alt="">
+					</picture>
+				</div>
+			</div>
+		</section>
 
 
 		<section class="support section">
@@ -252,11 +263,47 @@
 
 
 
-		<!-- <section class="steps section">
+		<section class="steps section">
 			<div class="container">
 				<h2 class="steps__title h2">Как начать работу с трансграничным ЭДО</h2>
+
+				<ul class="steps__list">
+					<li class="steps__item">
+						<h3 class="steps__item-title">Регистрация в системе</h3>
+						<div class="steps__item-descr">
+							<ul>
+								<li>Заполнение заявки на подключение</li>
+								<li>Заключение договора с ТОО «МетаЭра»</li>
+							</ul>
+						</div>
+					</li>
+					<li class="steps__item">
+						<h3 class="steps__item-title">Получение ЭЦП</h3>
+						<div class="steps__item-descr">
+							<p>Оформление электронной цифровой подписи в аккредитованном удостоверяющем центре Казахстана</p>
+						</div>
+					</li>
+					<li class="steps__item">
+						<h3 class="steps__item-title">Подключение контрагентов</h3>
+						<div class="steps__item-descr">
+							<ul>
+								<li>Предоставление информации о контрагентах <br> из России и Беларуси</li>
+								<li>Настройка соединения с их операторами ЭДО</li>
+							</ul>
+						</div>
+					</li>
+					<li class="steps__item">
+						<h3 class="steps__item-title">Тестовый и промышленный запуск</h3>
+						<div class="steps__item-descr">
+							<ul>
+								<li>Проведение тестового обмена документами</li>
+								<li>Переход на промышленную эксплуатацию</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
 			</div>
-		</section> -->
+		</section>
 
 		<section class="benefits section">
 			<div class="container">
@@ -443,10 +490,48 @@
 	</footer>
 	<!-- end footer -->
 	
+	<!-- popup -->
+	 <div style="display: none;" class="popup" id="get-consult">
+	    <div class="form">
+	        <div class="popup__title">Бесплатная консультация</div>
+	        <div class="popup__descr">Заполните форму, и мы свяжемся с вами</div>
+	        <form class="wpcf7-form">
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="text" name="your-name" placeholder="Имя">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="email" name="your-mail" placeholder="Электронная почта">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <input class="form__input" type="tel" name="your-tel" placeholder="+375 (29) 789-76-38">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <span class="wpcf7-form-control wpcf7-acceptance">
+	                    <span class="wpcf7-list-item">
+	                        <label>
+	                            <input type="checkbox" name="acceptance-389" value="1" aria-invalid="false">
+	                            <span class="wpcf7-list-item-label">Я ознакомлен(а) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
+	                        </label>
+	                    </span>
+	                </span>
+	            </span>
+	            <input class="btn form__submit" type="submit" value="Отправить заявку">
+	        </form>
+	    </div>
+	
+	    <!-- <div class="form__thank" style="display: none;">
+	      <img src="img/thank-1.svg" alt="">
+	      <div class="h1">Спасибо за обращение!</div>
+	      <p>Мы свяжемся с вами в ближайшее время</p>
+	    </div> -->
+	</div>
+	<!-- end popup -->
+	
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/scripts.js?v=2"></script>
+	<script src="js/scripts.js?v=3"></script>
 	<!-- end scripts -->
 
 </body>
