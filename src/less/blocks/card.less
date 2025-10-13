@@ -1,26 +1,7 @@
 .cards {
     .row-flex();
 
-    &__header {
-        margin-top: 0;
-        margin-bottom: 30px;
-        font-size: 50px;
-        font-weight: 700;
-
-        .lg-block({
-            margin-bottom: 20px;
-            font-size: 40px;
-        });
-
-        .md-block({
-            font-size: 36px;
-        });
-
-        .xs-block({
-            margin-bottom: 10px;
-            font-size: 24px;
-        });
-    }
+    
 }
 
 .card {
@@ -28,11 +9,13 @@
     .size(4);
     .size-md(12);
 
-    display: block;
+    display: flex;
+    flex-direction: column;
+
     position: relative;
     z-index: 1;
     padding: 40px;
-    min-height: 310px;
+    min-height: 260px;
     
     color: @black;
     background-color: @grey;
@@ -40,6 +23,11 @@
     text-decoration: none;
     border-radius: 30px;
     transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        transform: translateY(-8px) scale(1.02);
+        // box-shadow: 0 0 20px rgba(249, 249, 249, 0.8);
+    }
 
     .lg-block({
         padding: 30px;
@@ -56,12 +44,22 @@
         min-height: 160px;
     });
 
+    &__pic {
+        // margin-bottom: 30px;
+        width: 40px;
+        height: 40px;
+    }
+
     &__title {
         font-size: 26px;
         font-weight: 700;
 
         .lg(font-size, 24px);
         .xs(font-size, 18px);
+    }
+
+    &__pic + &__title {
+        margin-top: 30px;
     }
     
     &__descr {
@@ -94,18 +92,23 @@
 }
 
 a.card {
-    min-height: 380px;
+    display: block;
+    min-height: 260px;
+
+    .xl-block({
+        min-height: 300px;
+    });
 
     .lg-block({
-        min-height: 410px;
+        min-height: 280px;
     });
 
     .md-block({
-        min-height: 200px;
+        min-height: 160px;
     });
 
     .xs-block({
-        min-height: 240px;
+        min-height: 170px;
     });
 
     .card__descr {
@@ -136,11 +139,6 @@ a.card {
             bottom: 30px;
             left: 30px;
         });
-    }
-
-    &:hover {
-        transform: translateY(-8px) scale(1.02);
-        // box-shadow: 0 0 20px rgba(249, 249, 249, 0.8);
     }
 
     &:hover::after {

@@ -1,0 +1,29 @@
+.confes {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+    }
+
+    &__box {
+        .row-flex();
+
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        .col();
+        .size(4);
+        .size-md(12);
+
+        list-style: none;
+
+      
+    }
+
+    &__item + &__item {
+        .md(margin-top, 30px);
+    }
+}

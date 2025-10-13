@@ -44,6 +44,10 @@
         margin-top: 0;
         margin-bottom: 8px;
 
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 900px;
+
         font-size: 50px;
         font-weight: 700;
 
@@ -53,7 +57,11 @@
     }
 
     &__descr {
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 30px;
+        max-width: 900px;
+        
         font-size: 26px;
 
         .lg-block({
@@ -70,6 +78,62 @@
             font-size: 18px;
         });
 
+        p {
+            margin: 0;
+        }
+
     }
     
+}
+
+.start2 {
+
+    .start__title, .start__descr {
+        max-width: 100%;
+
+        .xl(text-align, center);
+    }
+
+
+    &__content {
+        .row-flex();
+
+        padding: 60px 60px 77px;
+        border-radius: 40px;
+
+        .xl-block({
+            padding: 50px 95px;
+        });
+
+        .lg-block({
+            padding: 50px 80px;
+        });
+
+        .md-block({
+            padding: 50px 90px;
+        });
+
+        .xs-block({
+            padding: 20px 30px;
+            border-radius: 30px;
+        });
+    }
+
+    &__left {
+        .col();
+        .size(7);
+        .size-xl(12);
+    }
+
+    &__right {
+        .col();
+        .size(5);
+        .size-xl(12);
+    }
+
+    .wpcf7-form-control-wrap, .form__submit {
+        max-width: 100%;
+
+        .xl(max-width, 384px);
+    }
 }

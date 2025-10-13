@@ -1,0 +1,30 @@
+.fast {
+
+    .card {
+        .md(padding-right, 100px);
+        .xs(padding-right, 40px);
+
+    }
+
+
+    .card__pic + .card__title {
+        margin-top: 30px;
+
+        .md(margin-top, 0);
+        .xs(margin-top, 30px);
+    }
+
+
+    .card__pic {
+
+        .md-block({
+            position: absolute;
+            right: 40px;
+            top: 40px;
+        });
+
+        .xs-block({
+            position: static;
+        });
+    }
+}

@@ -1,21 +1,21 @@
 .hero {
     padding-top: 40px;
-    padding-bottom: 46px;
+    padding-bottom: 50px;
 
     .xl-block({
-        padding-bottom: 66px;
+        padding-bottom: 40px;
     });
 
-    .xl-block({
-        padding-bottom: 62px;
+    .lg-block({
+        padding-bottom: 30px;
     });
 
     .md-block({
-        text-align: center;
+        padding-bottom: 20px;
     });
 
     .xs-block({
-        padding: 40px 0;
+        padding-top: 10px;
     });
 
     &-cards .container {
@@ -32,9 +32,8 @@
 
     &__text {
         .col();
-        .size(7);
-        .size-xl(8);
-        .size-md(12);
+        .size(10);
+        .size-xl(12);
     }
 
     &__title {
@@ -79,11 +78,6 @@
     }
 
     &__pic {
-        .col();
-        .size(5);
-        .size-xl(4);
-        .size-md(12);
-
         overflow: hidden;
 
         img {
@@ -112,25 +106,59 @@
         });
     }
 
-    &-cards {
-        padding-top: 80px;
-        padding-bottom: 50px;
+}
+
+.home {
+
+    .hero {
+        padding-bottom: 46px;
 
         .xl-block({
-            padding: 40px 0;
-        });
-
-        .lg-block({
-            padding-bottom: 30px;
+            padding-bottom: 66px;
         });
 
         .md-block({
-            padding-bottom: 20px;
+            text-align: center;
         });
 
         .xs-block({
-            padding-top: 40px;
+            padding: 40px 0;
+            padding-top: 10px;
         });
     }
 
+    .hero__text {
+        .col();
+        .size(7);
+        .size-xl(8);
+        .size-md(12);
+    }
+
+    .hero__pic {
+        .col();
+        .size(5);
+        .size-xl(4);
+        .size-md(12);
+    }
+}
+
+.home-hero-cards {
+     padding-top: 80px;
+    padding-bottom: 50px;
+
+    .xl-block({
+        padding: 40px 0;
+    });
+
+    .lg-block({
+        padding-bottom: 30px;
+    });
+
+    .md-block({
+        padding-bottom: 20px;
+    });
+
+    .xs-block({
+        padding-top: 40px;
+    });
 }

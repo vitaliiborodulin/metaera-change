@@ -1,0 +1,102 @@
+.steps {
+    padding-bottom: 0;
+    .xl(padding-bottom, 0);
+    .lg(padding-bottom, 0);
+
+    &__title {
+        margin-bottom: 30px;
+
+        .md(max-width, 60%);
+        .xs(margin-bottom, 20px);
+    }
+
+    &__list {
+        .row-flex();
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+
+        counter-reset: steps 0;
+    }
+
+    &__item {
+        .col();
+        .size(6);
+        .size-md(12);
+
+        margin-bottom: 50px;
+        list-style: none;
+        counter-increment: steps 1;
+
+        .lg(margin-bottom, 30px);
+        .md(margin-bottom, 0);
+
+        &::before {
+            padding: 4px 16px;
+            display: inline-block;
+            content: 'Шаг ' counter(steps);
+
+
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+
+            border-radius: 500px;
+            background-color: @accent;
+            color: @white;
+
+            .md(font-size, 18px);
+            .xs(font-size, 16px);
+        }
+
+
+        &-title {
+            margin-top: 20px;
+            margin-bottom: 16px;
+            font-size: 26px;
+            font-weight: 700;
+
+            .lg(font-size, 24px);
+
+            .xs-block({
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 18px;
+            });
+        }
+
+        &-descr {
+            color: @dark-grey;
+            font-size: 20px;
+
+            .md(font-size, 18px);
+            .xs(font-size, 16px);
+
+            p {
+                margin: 0;
+            }
+
+            p + p {
+                margin-top: 5px;
+            }
+
+            ul {
+                padding: 0;
+            }
+
+            li {
+                list-style-position: inside;
+                list-style-type: disc;
+            }
+
+            br {
+                .lg(display, none);
+            }
+        }
+    }
+
+    &__item + &__item {
+        .md(margin-top, 30px);
+    }
+}

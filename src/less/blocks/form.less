@@ -28,11 +28,12 @@
     }
 
     &__submit {
+        display: block;
         // padding: 9px 50px;
         width: 100%;
         max-width: 384px;
         // font-size: 13px;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
         border: none;
@@ -60,7 +61,16 @@
 }
 
 .wpcf7-not-valid-tip {
-    display: none;
+    // display: none;
+    font-size: 14px
+}
+
+.form .wpcf7-response-output {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-size: 14px
 }
 
 .wpcf7-spinner {
@@ -73,7 +83,46 @@
 
 .wpcf7-acceptance {
     font-size: 14px;
-    line-height: 1;
+    text-align: left;
+    // line-height: 1;
 
-    .xs(font-size, 10px);
+    // .xs(font-size, 10px);
+}
+
+.form .wpcf7-acceptance label {
+    display: flex;
+    align-items: flex-start
+}
+
+.form .wpcf7-acceptance input[type=checkbox] {
+    display: inline-flex;
+    appearance: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+    margin-right: 8px;
+    border-radius: 50%;
+    border: 1px solid #0E80D4;
+    position: relative;
+}
+
+.form .wpcf7-acceptance input[type=checkbox]:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    background: url(../img/check_small-blue.svg) center/contain no-repeat;
+}
+
+.form .wpcf7-acceptance input[type=checkbox]:checked:before {
+    opacity: 1;
+    visibility: visible
 }

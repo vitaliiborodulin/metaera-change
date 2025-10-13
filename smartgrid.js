@@ -1,6 +1,6 @@
 module.exports = {
 	columns: 12,
-	offset: "24px",
+	offset: "20px",
 	container: {
 		maxWidth: "1360px",
 		fields: "32px" // Внимание! fields обязан быть >= offset / 2

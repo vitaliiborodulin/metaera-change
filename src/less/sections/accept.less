@@ -1,0 +1,49 @@
+.accept {
+
+    &__content {
+        padding: 60px;
+
+        .md(padding, 40px);
+        .xs(padding, 30px);
+    }
+
+    &__subtitle {
+        margin-bottom: 53px;
+
+        .xl(margin-bottom, 39px);
+        .lg(margin-bottom, 50px);
+        .md(margin-bottom, 35px);
+        .xs(margin-bottom, 35px);
+    }
+
+    &__box {
+        .row-flex();
+
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        .col();
+        .size(4);
+        .size-md(12);
+
+        list-style: none;
+    }
+
+     &__item + &__item {
+        .md(margin-top, 40px);
+    }
+
+    &__pic {
+
+        .xs-block({
+            width: 40px;
+            height: 40px;
+        })
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+}

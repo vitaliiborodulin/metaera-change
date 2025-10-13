@@ -1,0 +1,60 @@
+.info {
+    position: relative;
+    padding: 64px 60px;
+
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    color: @white;
+    background-color: @dark-blue;
+
+    border-radius: 40px;
+
+    .xl-block({
+        padding: 52px 60px;
+    });
+
+    .lg-block({
+        padding: 40px 60px;
+        gap: 20px;
+    });
+
+    .md-block({
+        padding: 34px 50px;
+        font-size: 18px;
+    });
+
+    .xs-block({
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        padding: 30px;
+        font-size: 16px;
+    });
+
+
+    p {
+        margin: 0;
+    }
+
+    p + p {
+        margin-top: 10px;
+    }
+
+    &::before {
+        display: block;
+        content: '';
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        background: url(../img/danger.svg) no-repeat center/contain;
+
+        .xs-block({
+            width: 40px;
+            height: 40px;
+        });
+    }
+}

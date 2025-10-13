@@ -1,0 +1,46 @@
+.popup {
+    max-width: 700px;
+    padding: 138px 88px;
+    background-color: @white;
+    border-radius: 40px;
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__descr {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    form {
+        margin-top: 40px;
+
+        .form__input {
+            background-color: @grey;
+        }
+
+        .form__input:focus {
+            background-color: @white;
+        }
+    }
+
+    .fancybox-close-small {
+        top: 40px;
+        right: 40px;
+        // width: 32px;
+        // height: 32px;
+        border: 2px solid #9E9E9E;
+        border-radius: 50%;
+        color: #9E9E9E;
+        opacity: 1;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
