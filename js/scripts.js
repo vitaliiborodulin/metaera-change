@@ -60,7 +60,7 @@ $(function() {
             });
         } else if (swiperPriceInit) {
             $('.price__list .swiper-wrapper').contents().unwrap();
-            $('.price__list .price__item').removeAttr('style');    
+            $('.price__list .price__item').removeAttr('style');
             //mobileswiper.destroy(true, true); 
             swiperPriceInit = false;
         }
@@ -68,6 +68,42 @@ $(function() {
     
     swiperPriceOn();
     $(window).resize(swiperPriceOn);
+    
+    // scheme
+    
+    let swiperSchemeInit = false;
+    let mobileSchemeSwiper;
+    
+    function swiperSchemeOn() {
+        if (window.innerWidth >= 576) {
+            $('.scheme__steps').wrapInner('<div class="swiper-wrapper"></div>');
+            swiperSchemeInit = true;
+            mobileSchemeSwiper = new Swiper('.scheme__steps', {
+                slideClass: 'scheme__steps-item',
+                slidesPerView: 1.4,
+                spaceBetween: 16, 
+                breakpoints: {
+                    768: {
+                        slidesPerView: 1.6,
+                    },
+                    1024: {
+                        slidesPerView: 1.8,
+                    },
+                    1280: {
+                        slidesPerView: 2.4,
+                    },
+                }
+            });
+        } else if (swiperSchemeInit) {
+            $('.scheme__steps .swiper-wrapper').contents().unwrap();
+            $('.scheme__steps .scheme__steps-item').removeAttr('style');
+            //mobileswiper.destroy(true, true); 
+            swiperSchemeInit = false;
+        }
+    }
+    
+    swiperSchemeOn();
+    $(window).resize(swiperSchemeOn);
     
     // support
     
@@ -85,7 +121,7 @@ $(function() {
             });
         } else if (swiperSupportInit) {
             $('.support__list .swiper-wrapper').contents().unwrap();
-            $('.support__list .support__item').removeAttr('style');    
+            $('.support__list .support__item').removeAttr('style');
             //mobileswiper.destroy(true, true); 
             swiperSupportInit = false;
         }

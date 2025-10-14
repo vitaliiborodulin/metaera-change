@@ -2078,6 +2078,61 @@ a.card:hover::after {
   margin-bottom: 30px;
 }
 
+.scheme__steps {
+  margin-top: 30px;
+  counter-reset: scheme-steps 0;
+}
+
+.scheme__steps-item {
+  position: relative;
+  padding: 60px 60px 74px;
+  border-radius: 30px;
+  counter-increment: scheme-steps 1;
+}
+
+.scheme__steps-item::before {
+  position: static;
+  display: inline-block;
+  padding: 4px 16px;
+  margin-bottom: 20px;
+  content: 'Шаг ' counter(scheme-steps);
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 500px;
+  text-align: center;
+  color: #fff;
+  background-color: #0E80D4;
+}
+
+.scheme__steps-item-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.scheme__steps-item-descr {
+  color: #505152;
+  font-size: 20px;
+}
+
+.scheme__steps-item-descr p {
+  margin: 0;
+}
+
+.scheme__steps-item-descr p + p {
+  margin-top: 5px;
+}
+
+.scheme__steps-item-list {
+  margin: 0;
+  padding: 0;
+}
+
+.scheme__steps-item-item {
+  list-style-position: inside;
+}
+
 .steps {
   padding-bottom: 0;
 }
@@ -2776,6 +2831,14 @@ a.card:hover::after {
     margin-bottom: 50px;
   }
 
+  .scheme__steps-item {
+    padding: 50px 50px 60px;
+  }
+
+  .scheme__steps-item-title {
+    font-size: 24px;
+  }
+
   .steps {
     padding-bottom: 0;
   }
@@ -3134,6 +3197,18 @@ a.card:hover::after {
 
   .accept__item + .accept__item {
     margin-top: 40px;
+  }
+
+  .scheme__steps-item {
+    padding: 40px 40px 50px;
+  }
+
+  .scheme__steps-item::before {
+    font-size: 18px;
+  }
+
+  .scheme__steps-item-descr {
+    font-size: 18px;
   }
 
   .steps__title {
@@ -3620,6 +3695,32 @@ a.card:hover::after {
 
   .scheme__title {
     margin-bottom: 20px;
+  }
+
+  .scheme__steps {
+    margin-top: 20px;
+  }
+
+  .scheme__steps-item {
+    padding: 30px;
+  }
+
+  .scheme__steps-item::before {
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .scheme__steps-item-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .scheme__steps-item-descr {
+    font-size: 16px;
+  }
+
+  .scheme__steps-item + .scheme__steps-item {
+    margin-top: 16px;
   }
 
   .steps__title {
