@@ -2337,6 +2337,132 @@ a.card:hover::after {
   background: url(../img/check_small-dblue.svg) no-repeat center / contain;
 }
 
+.contacts {
+  padding-bottom: 50px;
+}
+
+.contacts .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts__h1 {
+  margin: 40px 0;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.contacts__box {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 240px auto;
+  grid-template-areas: "adress time mail" "adress btns btns";
+}
+
+.contacts__box a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.contacts__item {
+  padding: 40px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts__pic {
+  margin-top: auto;
+}
+
+.contacts__item--adress {
+  grid-area: adress;
+}
+
+.contacts__item--time {
+  grid-area: time;
+}
+
+.contacts__item--mail {
+  grid-area: mail;
+}
+
+.contacts__head {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.contacts__info {
+  font-size: 18px;
+  color: #505152;
+  margin-bottom: 17px;
+}
+
+.contacts__info a {
+  color: #505152;
+}
+
+.contacts__btns {
+  grid-area: btns;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contacts__btns .btn {
+  flex-grow: 1;
+}
+
+.contacts__banner-content {
+  overflow: hidden;
+  padding: 60px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 20px;
+  background-size: 44%;
+}
+
+.contacts__banner-text {
+  width: 50%;
+  margin-left: auto;
+}
+
+.contacts__banner-text .btn {
+  margin-top: 30px;
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+.contacts__banner-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.contacts__banner-descr {
+  font-size: 26px;
+}
+
+.contacts__banner-descr p {
+  margin: 0;
+}
+
+.contacts__banner-descr p + p {
+  margin-top: 10px;
+}
+
+.contacts__banner-soc {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
 .footer {
   margin-top: 10px;
 }
@@ -2631,6 +2757,24 @@ a.card:hover::after {
   .benefits__item-title {
     margin-top: 30px;
   }
+
+  .contacts {
+    padding-bottom: 40px;
+  }
+
+  .contacts__h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 56px;
+  }
+
+  .contacts__h1 {
+    font-size: 48px;
+  }
+
+  .contacts__box {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -2869,6 +3013,37 @@ a.card:hover::after {
 
   .benefits__item-title {
     font-size: 24px;
+  }
+
+  .contacts {
+    padding-bottom: 30px;
+  }
+
+  .contacts__box {
+    gap: 16px;
+  }
+
+  .contacts__item {
+    padding: 30px;
+  }
+
+  .contacts__head {
+    font-size: 24px;
+  }
+
+  .contacts__banner-content {
+    padding: 50px;
+    background-position-x: 95%;
+    background-position-y: 100px;
+  }
+
+  .contacts__banner-text {
+    margin-left: 0;
+    width: 60%;
+  }
+
+  .contacts__banner-title {
+    font-size: 40px;
   }
 
   .footer__bottom {
@@ -3279,6 +3454,53 @@ a.card:hover::after {
 
   .benefits__item-list-descr {
     font-size: 18px;
+  }
+
+  .contacts {
+    padding-bottom: 20px;
+  }
+
+  .contacts__h1 {
+    font-size: 40px;
+  }
+
+  .contacts__box {
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "adress time" "btns mail";
+  }
+
+  .contacts__btns {
+    flex-wrap: wrap;
+  }
+
+  .contacts__btns .btn {
+    width: 100%;
+  }
+
+  .contacts__banner-content {
+    text-align: center;
+    padding: 60px 90px 377px;
+    background-position-x: 50%;
+    background-position-y: 380px;
+    background-size: 84%;
+  }
+
+  .contacts__banner-text {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .contacts__banner-title {
+    font-size: 36px;
+  }
+
+  .contacts__banner-descr {
+    font-size: 24px;
+  }
+
+  .contacts__banner-soc {
+    justify-content: center;
   }
 
   .footer__info {
@@ -3789,6 +4011,55 @@ a.card:hover::after {
   .benefits__pic {
     width: 40px;
     height: 40px;
+  }
+
+  .contacts {
+    padding-bottom: 15px;
+  }
+
+  .contacts__h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+
+  .contacts__box {
+    display: block;
+  }
+
+  .contacts__box * + * {
+    margin-top: 10px;
+  }
+
+  .contacts__head {
+    font-size: 18px;
+  }
+
+  .contacts__info {
+    font-size: 16px;
+  }
+
+  .contacts__btns {
+    justify-content: center;
+  }
+
+  .contacts__btns .btn {
+    margin-bottom: 10px;
+  }
+
+  .contacts__banner-content {
+    padding: 30px 20px 300px;
+    background-position-x: 50%;
+    background-position-y: 300px;
+    background-size: 84%;
+  }
+
+  .contacts__banner-title {
+    font-size: 24px;
+  }
+
+  .contacts__banner-descr {
+    font-size: 18px;
   }
 
   .footer__content {
