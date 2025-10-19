@@ -1241,7 +1241,6 @@ a.card:hover::after {
 .popup__title {
   margin-bottom: 10px;
   font-size: 50px;
-  line-height: 1;
   font-weight: 700;
   text-align: center;
 }
@@ -1261,6 +1260,18 @@ a.card:hover::after {
 
 .popup form .form__input:focus {
   background-color: #fff;
+}
+
+.popup .wpcf7-form-control-wrap,
+.popup .form__input,
+.popup .btn {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.popup .fancybox-button {
+  width: 32px;
+  height: 32px;
 }
 
 .popup .fancybox-close-small {
@@ -3103,6 +3114,18 @@ a.card:hover::after {
     gap: 20px;
   }
 
+  .popup {
+    padding: 125px 88px;
+  }
+
+  .popup__title {
+    font-size: 40px;
+  }
+
+  .popup__descr {
+    font-size: 24px;
+  }
+
   .banner {
     height: 120px;
   }
@@ -3399,11 +3422,6 @@ a.card:hover::after {
     font-size: 18px;
   }
 
-  .form__input {
-    padding: 18px 20px 17px;
-    font-size: 16px;
-  }
-
   .tabs {
     gap: 30px;
   }
@@ -3424,6 +3442,14 @@ a.card:hover::after {
   .info {
     padding: 34px 50px;
     font-size: 18px;
+  }
+
+  .popup {
+    padding: 127px 58px;
+  }
+
+  .popup__title {
+    font-size: 36px;
   }
 
   .banner {
@@ -4010,6 +4036,11 @@ a.card:hover::after {
     left: 30px;
   }
 
+  .form__input {
+    padding: 18px 20px 17px;
+    font-size: 16px;
+  }
+
   .wpcf7-form-control-wrap {
     margin-bottom: 6px;
   }
@@ -4059,6 +4090,33 @@ a.card:hover::after {
   .info::before {
     width: 40px;
     height: 40px;
+  }
+
+  .popup {
+    padding: 53px 20px;
+    border-radius: 20px;
+  }
+
+  .popup__title {
+    font-size: 24px;
+  }
+
+  .popup__descr {
+    font-size: 18px;
+  }
+
+  .popup form {
+    margin-top: 20px;
+  }
+
+  .popup .fancybox-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .popup .fancybox-close-small {
+    top: 20px;
+    right: 20px;
   }
 
   .banner {
