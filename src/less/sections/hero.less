@@ -32,8 +32,14 @@
 
     &__text {
         .col();
-        .size(10);
-        .size-xl(12);
+        .size(6);
+        .size-md(12);
+    }
+
+    &__pic {
+        .col();
+        .size(6);
+        .size-md(12);
     }
 
     &__title {
@@ -59,6 +65,10 @@
             margin-top: 10px;
             font-size: 16px;
         });
+
+        br {
+            .lg(display, none);
+        }
     }
 
     &__subtitle p {
@@ -74,35 +84,6 @@
 
         .xs-block({
             margin-top: 20px;
-        });
-    }
-
-    &__pic {
-        overflow: hidden;
-
-        img {
-            width: 100%;
-            height: 100%;
-            // height: auto;
-            object-fit: cover;
-            // object-position: center;
-            border-radius: 40px;
-
-            .md-block({
-                margin-bottom: 26px;
-                max-width: 524px;
-                height: 380px;
-                object-fit: contain;
-            });
-
-            .xs-block({
-                height: 220px;
-            });
-        }
-
-        .md-block({
-            order: -1;
-            text-align: center;
         });
     }
 
@@ -139,6 +120,65 @@
         .size(5);
         .size-xl(4);
         .size-md(12);
+
+        overflow: hidden;
+
+        .md-block({
+            order: -1;
+            // text-align: center;
+        });
+
+        img {
+            width: 100%;
+            height: 100%;
+            // height: auto;
+            object-fit: cover;
+            // object-position: center;
+            border-radius: 40px;
+            
+
+            .md-block({
+                margin-bottom: 26px;
+                max-width: 524px;
+                height: 380px;
+                object-fit: contain;
+            });
+
+            .xs-block({
+                height: 220px;
+            });
+        }
+
+    }
+}
+
+.page-template-page-template-border .hero {
+
+    .hero__text {
+        .col();
+        .size(10);
+        .size-xl(12);
+    }
+
+}
+
+.page-template-page-template-check .hero{
+    .hero__content {
+        .md-block({
+            text-align: center;
+        });
+    }
+
+    .hero__pic {
+        .md-block({
+            margin-top: 30px;
+        });
+    }
+
+    .btns {
+        .md-block({
+            justify-content: center;
+        });
     }
 }
 

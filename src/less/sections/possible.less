@@ -1,0 +1,84 @@
+.possible {
+
+    &__title {
+        margin-bottom: 30px;
+        .lg(margin-bottom, 20px);
+    }
+
+    .tab-item {
+        align-items: flex-start
+    }
+
+    .tab-image {
+        .size(7);
+        .size-xl(6);
+        .size-md(12);
+
+        text-align: center;
+        overflow: hidden;
+        height: 460px;
+
+        .md-block({
+            margin-bottom: 20px;
+            height: 360px;
+        });
+
+        img {
+            width: 100%;
+            height: 100%;
+            // height: auto;
+            object-fit: contain;
+            // object-position: center;
+            border-radius: 40px;
+        }
+    }
+
+    .tab-text {
+        .size(5);
+        .size-xl(6);
+        .size-md(12);
+
+        padding: 40px;
+        border-radius: 40px;
+        font-size: 20px;
+
+        .md-block({
+            font-size: 18px;
+            column-count: 2;
+        });
+
+        .xs-block({
+            font-size: 16px;
+            column-count: 1;
+            padding: 30px 20px;
+        });
+    }
+
+    .tab-card {
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 34px;
+            list-style: none;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 24px;
+                height: 24px;
+                background: url(../img/tick-circle.svg) no-repeat;
+            }
+        }
+
+        li + li {
+            margin-top: 20px;
+        }
+    }
+}

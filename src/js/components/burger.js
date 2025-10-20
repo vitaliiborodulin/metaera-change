@@ -1,6 +1,7 @@
 const burger = $('.burger');
 const menu = $('.header__nav');
-
+// const menuInner = $('.header__menu-wrapper');
+// const header = $('.header');
 
 burger.on('click', function(e) {
     e.preventDefault();
@@ -18,6 +19,21 @@ $(document).keyup(function(e) {
         $('html, body').removeClass('overflow');
     }
 });
+
+// close menu outside menu
+
+document.addEventListener("click", function(e) {
+    const burgerJs = document.querySelector('.burger');
+    const menuInnerJs = document.querySelector('.header__menu-wrapper');
+
+    if (menu.hasClass('open') && !burgerJs.contains(e.target) && !menuInnerJs.contains(e.target)){
+        menu.removeClass('open');
+        burger.removeClass('burger--close');
+        $('html, body').removeClass('overflow');
+    }
+});
+
+
 
 // $('body').on('click', '.navigation__menu a[href*="#"]', function(e) {
 // 	var fixed_offset = 70;

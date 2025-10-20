@@ -1,24 +1,72 @@
 .popup {
     max-width: 700px;
-    padding: 138px 88px;
+    // padding: 138px 88px;
+    padding: 66px 88px;
     background-color: @white;
     border-radius: 40px;
+
+    .lg-block({
+        // padding: 125px 88px;
+        padding: 74px 88px;
+    });
+
+    .md-block({
+        // padding: 127px 58px;
+        padding: 70px 58px;
+    });
+
+    .xs-block({
+        padding: 53px 20px;
+        border-radius: 20px;
+    });
 
     &__title {
         margin-bottom: 10px;
         font-size: 50px;
-        line-height: 1;
+        // line-height: 1;
         font-weight: 700;
         text-align: center;
+
+        .lg(font-size, 40px);
+        .md(font-size, 36px);
+        .xs(font-size, 24px);
     }
 
     &__descr {
         font-size: 26px;
         text-align: center;
+
+        .lg(font-size, 24px);
+        .xs(font-size, 18px);
+    }
+
+    &__tel {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 50px;
+        font-weight: 700;
+        color: @accent;
+        text-align: center;
+
+        .xs-block({
+            margin-bottom: 30px;
+            font-size: 30px;
+        });
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .contacts__btns {
+        .lg(flex-wrap, nowrap);
+        .xs(flex-wrap, wrap);
     }
 
     form {
         margin-top: 40px;
+        .xs(margin-top, 20px);
 
         .form__input {
             background-color: @grey;
@@ -27,6 +75,23 @@
         .form__input:focus {
             background-color: @white;
         }
+    }
+
+    .wpcf7-form-control-wrap, 
+    .form__input, 
+    .btn {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .fancybox-button {
+        width: 32px;
+        height: 32px;
+
+        .xs-block({
+            width: 24px;
+            height: 24px;
+        });
     }
 
     .fancybox-close-small {
@@ -42,5 +107,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .xs-block({
+            top: 20px;
+            right: 20px;
+        });
     }
 }
+
+// #get-chat {
+//     padding: 66px 88px;
+// }

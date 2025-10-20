@@ -1,0 +1,127 @@
+.interest {
+
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+        .lg(margin-bottom, 20px);
+        .md(text-align, left);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        gap: 24px;
+
+        counter-reset: interest 0;
+
+       .lg(gap, 16px);
+       .md(display, block);
+    }
+
+    &__item {
+        width: 30%;
+        padding: 40px 40px 50px;
+
+        border-radius: 30px;
+
+        position: relative;
+        list-style: none;
+        counter-increment: interest 1;
+
+        .lg-block({
+            padding: 30px 30px 40px;
+        });
+
+        .md-block({
+            width: 100%;
+            padding: 40px;
+        });
+
+        .xs-block({
+            padding: 30px 30px 40px;
+        });
+
+        &::before {
+            margin-bottom: 30px;
+            display: block;
+            content: counter(interest);
+            width: 32px;
+            height: 32px;
+            border: 1px solid @dark-blue;
+            border-radius: 50%;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 30px;
+            color: @accent;
+
+            .lg-block({
+                margin-bottom: 20px;
+            });
+        }
+
+        &-title {
+            margin-top: 0;
+            margin-bottom: 16px;
+
+            font-size: 26px;
+            font-weight: 700;
+
+            .lg(font-size, 24px);
+
+            .xs-block({
+                margin-bottom: 10px;
+                font-size: 18px;
+            });
+        }
+
+        &-descr {
+            font-size: 20px;
+            color: @dark-grey;
+
+            .md(font-size, 18px);
+            .xs(font-size, 18px);
+        }
+    }
+
+    &__item--last {
+        width: calc(60% + 24px);
+        background: #E3E3E3 url(../img/interest-last-bg.webp) no-repeat center/cover;
+
+        .lg-block({
+            width: calc(60% + 16px);
+        });
+
+        .md-block({
+            width: 100%;
+            background: #E3E3E3 url(../img/interest-last-bg.webp) no-repeat left center/contain;
+        });
+
+        .xs-block({
+            padding-bottom: 220px;
+            background: #E3E3E3 url(../img/interest-last-bg.webp) no-repeat 80px bottom/contain;
+        });
+
+        &::before {
+            display: none;
+        }
+
+        .interest__item-title, .interest__item-descr {
+            max-width: 50%;
+            margin-left: auto;
+
+            .xs-block({
+                max-width: 100%;
+            });
+        }
+    }
+
+    &__item + &__item {
+        .md(margin-top, 16px);
+    }
+}

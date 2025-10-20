@@ -16,7 +16,7 @@
             font-size: 18px;
         });
 
-        .md-block({
+        .xs-block({
             padding: 18px 20px 17px;
             font-size: 16px;
         });
@@ -40,6 +40,33 @@
         outline: none;
         text-wrap: auto;
         cursor: pointer;
+    }
+
+    textarea {
+        height: 200px;
+        padding: 30px;
+        resize: none;
+        overflow-y: auto;
+
+        .xs-block({
+            padding: 20px;
+            height: 160px;
+        });
+    }
+
+    &__label {
+        display: inline-block;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 20px;
+
+        .md-block({
+            font-size: 18px;
+        });
+
+        .xs-block({
+            font-size: 16px;
+        });
     }
 
 }
@@ -125,4 +152,14 @@
 .form .wpcf7-acceptance input[type=checkbox]:checked:before {
     opacity: 1;
     visibility: visible
+}
+
+#get-chat {
+    .wpcf7-form {
+        margin-top: -20px;
+    }
+    .wpcf7-acceptance {
+        display: inline-block;
+        margin-top: 20px;
+    }
 }
