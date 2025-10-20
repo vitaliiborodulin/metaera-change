@@ -958,6 +958,20 @@ a.card:hover::after {
   cursor: pointer;
 }
 
+.form textarea {
+  height: 200px;
+  padding: 30px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.form__label {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
 .wpcf7-form br {
   display: none;
 }
@@ -1033,6 +1047,15 @@ a.card:hover::after {
 .form .wpcf7-acceptance input[type=checkbox]:checked:before {
   opacity: 1;
   visibility: visible;
+}
+
+#get-chat .wpcf7-form {
+  margin-top: -20px;
+}
+
+#get-chat .wpcf7-acceptance {
+  display: inline-block;
+  margin-top: 20px;
 }
 
 .soc {
@@ -1248,6 +1271,20 @@ a.card:hover::after {
 .popup__descr {
   font-size: 26px;
   text-align: center;
+}
+
+.popup__tel {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #0E80D4;
+  text-align: center;
+}
+
+.popup__tel a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .popup form {
@@ -2444,6 +2481,11 @@ a.card:hover::after {
   flex-grow: 1;
 }
 
+.contacts__btns svg {
+  width: 60px;
+  height: 60px;
+}
+
 .contacts__banner-content {
   overflow: hidden;
   padding: 60px;
@@ -3115,7 +3157,7 @@ a.card:hover::after {
   }
 
   .popup {
-    padding: 125px 88px;
+    padding: 74px 88px;
   }
 
   .popup__title {
@@ -3124,6 +3166,10 @@ a.card:hover::after {
 
   .popup__descr {
     font-size: 24px;
+  }
+
+  .popup .contacts__btns {
+    flex-wrap: nowrap;
   }
 
   .banner {
@@ -3422,6 +3468,10 @@ a.card:hover::after {
     font-size: 18px;
   }
 
+  .form__label {
+    font-size: 18px;
+  }
+
   .tabs {
     gap: 30px;
   }
@@ -3445,7 +3495,7 @@ a.card:hover::after {
   }
 
   .popup {
-    padding: 127px 58px;
+    padding: 70px 58px;
   }
 
   .popup__title {
@@ -4041,6 +4091,15 @@ a.card:hover::after {
     font-size: 16px;
   }
 
+  .form textarea {
+    padding: 20px;
+    height: 160px;
+  }
+
+  .form__label {
+    font-size: 16px;
+  }
+
   .wpcf7-form-control-wrap {
     margin-bottom: 6px;
   }
@@ -4103,6 +4162,15 @@ a.card:hover::after {
 
   .popup__descr {
     font-size: 18px;
+  }
+
+  .popup__tel {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+  .popup .contacts__btns {
+    flex-wrap: wrap;
   }
 
   .popup form {
@@ -4494,6 +4562,11 @@ a.card:hover::after {
 
   .contacts__btns .btn {
     margin-bottom: 10px;
+  }
+
+  .contacts__btns svg {
+    width: 54px;
+    height: 54px;
   }
 
   .contacts__banner-content {

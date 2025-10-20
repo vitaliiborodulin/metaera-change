@@ -304,10 +304,9 @@
 	    <div class="form">
 	        <div class="popup__title">Техподдержка</div>
 	        <div class="popup__descr">Мы на связи и готовы предоставить помощь в кратчайшие сроки</div>
-	
-	
+	        <div class="popup__tel"><a href="tel:+77003507474">+7 700 350-74-74</a></div>
 	        <div class="contacts__btns">
-	            <a href="#" class="btn">Написать в чат</a>
+	            <a href="javascript:;" class="btn btn-popup" data-src="#get-chat">Написать в чат</a>
 	            <a href="#" title="Whatsapp">
 	                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 	                    <rect width="60" height="60" rx="30" fill="#48C95F"/>
@@ -322,7 +321,48 @@
 	            </a>
 	        </div>
 	    </div>
-	</div>        
+	</div>
+	
+	<div style="display: none;" class="popup" id="get-tp-wom">
+	    <div class="form">
+	        <div class="popup__title">Техподдержка</div>
+	        <div class="popup__descr">Мы на связи и готовы предоставить помощь в кратчайшие сроки</div>
+	        <div class="popup__tel"><a href="tel:+77003507474">+7 700 350-74-74</a></div>
+	        <div class="contacts__btns">
+	            <a href="javascript:;" class="btn btn-popup" data-src="#get-chat">Написать в чат</a>
+	        </div>
+	    </div>
+	</div>
+	
+	<div style="display: none;" class="popup" id="get-chat">
+	    <div class="form">
+	        <div class="popup__title">Техподдержка</div>
+	        <div class="popup__descr">Мы на связи и готовы предоставить помощь в кратчайшие сроки</div>
+	        <div class="popup__tel"><a href="tel:+77003507474">+7 700 350-74-74</a></div>
+	        <form class="wpcf7-form">
+	            <span class="wpcf7-form-control-wrap">
+	                <label class="form__label" for="your-text">Введите сообщение</label>
+	                <textarea class="form__input" name="your-text" id="your-text" placeholder="Текст сообщения"></textarea>
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <label class="form__label" for="your-org">Пожалуйста, укажите от какой организации обращаетесь</label>
+	                <input class="form__input" type="text" name="your-org" id="your-org" placeholder="БИН">
+	            </span><br>
+	            <span class="wpcf7-form-control-wrap">
+	                <span class="wpcf7-form-control wpcf7-acceptance">
+	                    <span class="wpcf7-list-item">
+	                        <label>
+	                            <input type="checkbox" name="acceptance-389" value="1" aria-invalid="false">
+	                            <span class="wpcf7-list-item-label">Я ознакомлен(а) с политикой конфиденциальности и даю согласие на обработку персональных данных</span>
+	                        </label>
+	                    </span>
+	                </span>
+	            </span>
+	            <input class="btn form__submit" type="submit" value="Отправить">
+	        </form>
+	        
+	    </div>
+	</div>
 	<!-- end popup -->
 	
 	<!-- scripts -->
