@@ -1256,7 +1256,7 @@ a.card:hover::after {
 
 .popup {
   max-width: 700px;
-  padding: 138px 88px;
+  padding: 66px 88px;
   background-color: #fff;
   border-radius: 40px;
 }
