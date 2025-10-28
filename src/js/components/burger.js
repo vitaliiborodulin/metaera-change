@@ -8,7 +8,7 @@ burger.on('click', function(e) {
     burger.toggleClass('burger--close');
     menu.toggleClass('open');
     // menu.toggle(300);
-    $('html, body').toggleClass('overflow');
+    // $('html, body').toggleClass('overflow');
 });
 
 $(document).keyup(function(e) {
@@ -16,7 +16,7 @@ $(document).keyup(function(e) {
         // menu.hide(300);
         menu.removeClass('open');
         burger.removeClass('burger--close');
-        $('html, body').removeClass('overflow');
+        // $('html, body').removeClass('overflow');
     }
 });
 
@@ -29,7 +29,7 @@ document.addEventListener("click", function(e) {
     if (menu.hasClass('open') && !burgerJs.contains(e.target) && !menuInnerJs.contains(e.target)){
         menu.removeClass('open');
         burger.removeClass('burger--close');
-        $('html, body').removeClass('overflow');
+        // $('html, body').removeClass('overflow');
     }
 });
 

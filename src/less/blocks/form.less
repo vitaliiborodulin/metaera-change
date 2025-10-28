@@ -69,6 +69,39 @@
         });
     }
 
+    &__thank {
+        text-align: center;
+
+        img {
+            .xs-block({
+                width: 48px;
+                height: 48px;
+            });
+        }
+    }
+
+    &__thank-title {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        font-weight: 700;
+
+        .lg(font-size, 40px);
+        .md(font-size, 36px);
+
+        .xs-block({
+            margin-top: 20px;
+            font-size: 24px;
+        });
+    }
+
+    &__thank-descr {
+        font-size: 26px;
+        font-weight: 400;
+
+        .lg(font-size, 24px);
+        .xs(font-size, 18px);
+    }
 }
 
 .wpcf7-form {
