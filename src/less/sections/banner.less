@@ -32,7 +32,7 @@
     &__content {
         position: relative;
         padding: 0 30px;
-        pointer-events: none;
+        // pointer-events: none;
 
         &::after {
             position: absolute;
@@ -44,7 +44,12 @@
             height: 24px;
             background: url(../img/close-circle.svg) no-repeat center;
             cursor: pointer;
-            pointer-events: all;
+            // pointer-events: all;
+        }
+
+        a {
+            color: @black;
+            text-decoration: none;
         }
     }
 }
