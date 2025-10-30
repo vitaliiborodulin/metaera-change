@@ -1,7 +1,6 @@
-
 window.addEventListener('load', () => {
-  const header = document.querySelector('header');      
-  const banner = document.querySelector('.banner');     
+  const header = document.querySelector('header'); // твоя шапка
+  const banner = document.querySelector('.banner'); // верхний баннер (если есть)
 
   function getVisibleHeight(el) {
     if (!el) return 0;
@@ -20,7 +19,7 @@ window.addEventListener('load', () => {
 
   function scrollToAnchorId(id, smooth = true) {
     const el = document.getElementById(id);
-    if (!el) return;
+    if (!el) return false; // если якоря нет, вернём false
 
     const offset = getOffsetTop();
     const elementTop = el.getBoundingClientRect().top + window.pageYOffset;
@@ -30,6 +29,7 @@ window.addEventListener('load', () => {
       top: target,
       behavior: smooth ? 'smooth' : 'auto'
     });
+    return true;
   }
 
   
@@ -50,11 +50,14 @@ window.addEventListener('load', () => {
     const anchorId = url.searchParams.get('anchor');
     if (!anchorId) return;
 
-    e.preventDefault();
+    const isSamePage = url.pathname === window.location.pathname;
 
     
-    window.history.pushState({}, '', url.pathname + '?' + url.searchParams.toString());
-
-    scrollToAnchorId(anchorId, true);
+    if (isSamePage && scrollToAnchorId(anchorId, true)) {
+      e.preventDefault();
+      window.history.pushState({}, '', url.pathname + '?' + url.searchParams.toString());
+    } else {
+      
+    }
   });
 });
