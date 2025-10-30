@@ -6,6 +6,7 @@ $(function() {
     //= components/slider.js
     //= components/read-more.js
     //= components/popup.js
+    //= components/anchor.js
 
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         // if(event.detail.contactFormId=="224"){
