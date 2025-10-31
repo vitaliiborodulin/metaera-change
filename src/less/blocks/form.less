@@ -54,21 +54,6 @@
         });
     }
 
-    &__label {
-        display: inline-block;
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-size: 20px;
-
-        .md-block({
-            font-size: 18px;
-        });
-
-        .xs-block({
-            font-size: 16px;
-        });
-    }
-
     &__thank {
         text-align: center;
 
@@ -195,4 +180,31 @@
         display: inline-block;
         margin-top: 20px;
     }
+}
+
+section .form .form__thank {
+    padding: 20px 0;
+}
+
+form > label {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+    
+    .md-block({
+        font-size: 18px;
+    });
+    
+    .xs-block({
+        font-size: 16px;
+    });
+    
+    .wpcf7-form-control-wrap {
+        margin-top: 10px;
+    }
+}
+
+form .popup__tel {
+    margin-top: -10px;
+    margin-bottom: 0;
 }
