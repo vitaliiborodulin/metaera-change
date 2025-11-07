@@ -17,6 +17,7 @@
 
 <body class="home">
 
+	<div class="top">
 	<!-- banner -->
 	<div class="banner">
 	    <div class="container">
@@ -40,17 +41,36 @@
 	
 	
 	            <ul class="header__menu">
-	                <li class="current-menu-item"><a href="#">Цены</a></li>
+	                <li class="current-menu-item"><a href="home.html#price">Цены</a></li>
 	                <li><a href="border.html">Интеграция</a></li>
-	                <li><a href="#">Справка</a></li>
+	                <li class="menu-item-has-children">
+	                    <a href="javascript:;">Справка</a>
+	                    <ul class="sub-menu">
+	                        <li><a href="#">Трансграничный ЭДО</a></li>
+	                        <li><a href="#">Проверка контрагентов</a></li>
+	                        <li><a href="legal.html">Правовая информация</a></li>
+	                    </ul>
+	                </li>
 	                <li><a href="contacts.html">Контакты</a></li>
 	                <li><a href="check.html">Проверка контрагентов</a></li>
 	            </ul>
 	
 	
 	            <ul class="header__user">
-	                <li><a href="#">Войти</a></li>
-	                <li><a class="btn btn-o" href="#">Регистрация</a></li>
+	                <li>
+	                    <a href="#">Войти</a>
+	                    <ul class="header__user-submenu">
+	                        <li><a href="#">ЭДО</a></li>
+	                        <li><a href="#">Проверка контрагентов</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <a class="btn btn-o" href="#">Регистрация</a>
+	                    <ul class="header__user-submenu">
+	                        <li><a href="#">ЭДО рег</a></li>
+	                        <li><a href="#">Проверка контрагентов рег</a></li>
+	                    </ul>
+	                </li>
 	            </ul>
 	
 	            <div class="header__lang">
@@ -70,7 +90,14 @@
 	                    <ul class="menu">
 	                        <li class="current-menu-item"><a href="#">Цены</a></li>
 	                        <li><a href="border.html">Интеграция</a></li>
-	                        <!-- <li><a href="#">Справка</a></li> -->
+	                        <li class="menu-item-has-children">
+	                            <a href="javascript:;">Справка</a>
+	                            <ul class="sub-menu">
+	                                <li><a href="#">Трансграничный ЭДО</a></li>
+	                                <li><a href="#">Проверка контрагентов</a></li>
+	                                <li><a href="legal.html">Правовая информация</a></li>
+	                            </ul>
+	                        </li>
 	                        <li><a href="contacts.html">Контакты</a></li>
 	                        <li><a href="#">Техподдержка</a></li>
 	                    </ul>
@@ -82,8 +109,8 @@
 	                
 	                <div class="header__nav-bottom">
 	                    <ul class="header__user">
-	                        <li><a href="#">Войти</a></li>
-	                        <li><a class="btn btn-o" href="#">Регистрация</a></li>
+	                        <li><a href="javascript:;" class="btn-popup" data-src="#login-menu">Войти</a></li>
+	                        <li><a href="javascript:;" class="btn btn-o btn-popup" data-src="#reg-menu">Регистрация</a></li>
 	                    </ul>
 	                    
 	                    <div class="header__lang">
@@ -99,6 +126,7 @@
 	
 	</header>
 	<!-- end header -->
+	 </div>
 
 	<main>
 		
@@ -358,7 +386,7 @@
 			</div>
 		</section>
 
-		<section class="price section">
+		<section class="price section" id="price">
 			<div class="container">
 
 				<div class="price__title h2 tac">Цены на пакеты документов</div>
@@ -597,13 +625,13 @@
 	            </span>
 	            <input class="btn form__submit" type="submit" value="Отправить заявку">
 	        </form>
+	        
+	        <!-- <div class="form__thank" style="display: none;">
+	            <img src="img/thank-1.svg" alt="">
+	            <div class="h1">Спасибо за обращение!</div>
+	            <p>Мы свяжемся с вами в ближайшее время</p>
+	        </div> -->
 	    </div>
-	
-	    <!-- <div class="form__thank" style="display: none;">
-	      <img src="img/thank-1.svg" alt="">
-	      <div class="h1">Спасибо за обращение!</div>
-	      <p>Мы свяжемся с вами в ближайшее время</p>
-	    </div> -->
 	</div>
 	
 	<div style="display: none;" class="popup" id="get-tp">
@@ -667,6 +695,28 @@
 	            <input class="btn form__submit" type="submit" value="Отправить">
 	        </form>
 	        
+	    </div>
+	</div>
+	
+	<div style="display: none;" class="popup" id="login-menu">
+	    <ul class="popup__menu">
+	        <li><a href="#">ЭДО</a></li>
+	        <li><a href="#">Проверка контрагентов</a></li>
+	    </ul>
+	</div>
+	<div style="display: none;" class="popup" id="reg-menu">
+	      <ul class="popup__menu">
+	        <li><a href="#">ЭДО1</a></li>
+	        <li><a href="#">Проверка контрагентов1</a></li>
+	    </ul>
+	</div>
+	<div style="display: none;" class="popup" id="form-thank">
+	    <div class="form">
+	        <div class="form__thank">
+	            <img src="img/tick-circle-full.svg" alt="" width="64" height="64">
+	            <div class="form__thank-title">Спасибо <br> за обращение!</div>
+	            <div class="form__thank-descr">Мы свяжемся с вами <br> в ближайшее время</div>
+	        </div>
 	    </div>
 	</div>
 	<!-- end popup -->
