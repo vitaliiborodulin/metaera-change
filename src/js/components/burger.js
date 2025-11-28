@@ -7,7 +7,7 @@ burger.on('click', function(e) {
     e.preventDefault();
     burger.toggleClass('burger--close');
     menu.toggleClass('open');
-    // menu.toggle(300);
+    menu.fadeToggle(300);
     // $('html, body').toggleClass('overflow');
 });
 
@@ -15,6 +15,7 @@ $(document).keyup(function(e) {
     if (e.key === "Escape" || e.keyCode === 27) {
         // menu.hide(300);
         menu.removeClass('open');
+        menu.fadeOut();
         burger.removeClass('burger--close');
         // $('html, body').removeClass('overflow');
     }
@@ -28,6 +29,7 @@ document.addEventListener("click", function(e) {
 
     if (menu.hasClass('open') && !burgerJs.contains(e.target) && !menuInnerJs.contains(e.target)){
         menu.removeClass('open');
+        menu.fadeOut();
         burger.removeClass('burger--close');
         // $('html, body').removeClass('overflow');
     }
